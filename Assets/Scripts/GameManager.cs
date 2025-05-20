@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    InputManager inputManager;
+
+
+	void Awake()
+	{
+        inputManager = GetComponent<InputManager>();
+		Cursor.lockState = CursorLockMode.Locked;
+		DontDestroyOnLoad(gameObject);
+	}
+
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
