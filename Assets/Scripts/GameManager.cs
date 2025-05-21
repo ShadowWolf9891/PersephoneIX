@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     InputManager inputManager;
 
+    [SerializeField] private GameEvent testEvent;
 
 	void Awake()
 	{
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        
+        testEvent.Raise();
     }
 
     // Update is called once per frame
