@@ -7,7 +7,7 @@ using UnityEngine;
 /// 1. Create new events in the Project window via Assets > Create > Events > Game Event.
 /// 2. Attach GameEventListener class to objects that react to that event.
 /// 3. Drag a GameEvent into the gameEvent field in the Inspector of the GameEventListener. 
-///		Hook up any function to response — e.g., OpenDoor(), PlayAlarm().
+///		Hook up any function to response - e.g. OpenDoor(), PlayAlarm().
 /// 4. Trigger the event from any script using yourGameEventName.Raise()
 /// 
 /// </summary>

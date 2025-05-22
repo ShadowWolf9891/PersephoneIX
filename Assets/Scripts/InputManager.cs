@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
 	GameObject player;
 	PlayerInput pInput;
 	MovePlayer _MovePlayer;
+	[SerializeField]GameEvent playerInteract;
 
 	public static InputManager Instance { get; private set; }
 
@@ -65,5 +66,10 @@ public class InputManager : MonoBehaviour
 	public void OnLook(CallbackContext context)
 	{
 		_MovePlayer.SetLookVector(context.ReadValue<Vector2>());
+	}
+
+	public void Interact(CallbackContext context) 
+	{
+		playerInteract.Raise();
 	}
 }
