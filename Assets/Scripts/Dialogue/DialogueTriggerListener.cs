@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class DialogueTriggerListener : GameEventListener<DialogueTriggerData>
 {
-	// Uses UnityEvent with no parameters — works out of the box in Inspector
+	// Uses UnityEvent with no parameters, works out of the box in Inspector
 }

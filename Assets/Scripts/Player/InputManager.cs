@@ -6,7 +6,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
-
+/// <summary>
+/// Controls what happens when the player interects with the mouse or keyboard.
+/// </summary>
 public class InputManager : MonoBehaviour
 {
 	GameObject player;
@@ -46,19 +48,7 @@ public class InputManager : MonoBehaviour
 		}
 	}
 
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		
-    }
-
-    public void OnMove(CallbackContext context)
+	public void OnMove(CallbackContext context)
     {
 		_MovePlayer.SetInputVector(context.ReadValue<Vector2>());
     }
@@ -68,8 +58,15 @@ public class InputManager : MonoBehaviour
 		_MovePlayer.SetLookVector(context.ReadValue<Vector2>());
 	}
 
+	/// <summary>
+	/// Occurs when the player presses the interact key. (Currently 'E')
+	/// </summary>
+	/// <param name="context"></param>
 	public void Interact(CallbackContext context) 
 	{
-		playerInteract.Raise();
+		if (context.started)
+		{
+			playerInteract.Raise();
+		}
 	}
 }

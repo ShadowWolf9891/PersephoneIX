@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour, IGameEventListener<DialogueTrigger
 	private Coroutine delayCoroutine; //To make sure only one delay is running at a time.
 	DialogueData currentData;
 	int currentLineIndex = 0;
+	
 
 	public void OnEventRaised(DialogueTriggerData data)
 	{
