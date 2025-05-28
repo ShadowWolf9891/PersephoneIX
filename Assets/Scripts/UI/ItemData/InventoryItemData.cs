@@ -10,6 +10,4 @@ public class InventoryItemData : ScriptableObject
     public string itemName;
     public Sprite icon;
     [TextArea] public string description;
-    public bool isStackable;
-    public int maxStack;
 }

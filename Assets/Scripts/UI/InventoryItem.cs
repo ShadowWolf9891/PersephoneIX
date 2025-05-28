@@ -10,10 +10,7 @@ public class InventoryItem
     public InventoryItem(InventoryItemData item)
     {
         itemData = item;
-        if (item.isStackable)
-        {
-            AddItem();
-        }
+        AddItem();
     }
     public void AddItem()
     {

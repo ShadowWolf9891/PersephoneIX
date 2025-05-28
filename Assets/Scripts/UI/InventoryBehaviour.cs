@@ -9,7 +9,7 @@ public class InventoryBehaviour : MonoBehaviour, IInteractable
     public InventoryItemData itemData;
     public string GetInteractionPrompt() //"Press 'E' to open"
     {
-        return $"Press {interactAction.action.GetBindingDisplayString()}";
+        return $"Press {interactAction.action.GetBindingDisplayString()} \n {itemData.itemName}";
     }
 
     public bool IsHoldInteraction() //Should the button be held down to interact

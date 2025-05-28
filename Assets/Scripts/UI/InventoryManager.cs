@@ -22,8 +22,7 @@ public class InventoryManager : MonoBehaviour
         //checks if item is currently in inventory
         if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
         {
-            //**checks if item is stackable before adding item, might need changed
-            if (itemData.isStackable) item.AddItem();
+            item.AddItem();
             Debug.Log($"{itemData.itemName}, {item.stackSize}");
         }
         else

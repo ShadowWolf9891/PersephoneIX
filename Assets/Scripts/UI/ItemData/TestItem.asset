@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6b51b792d30834e9bc6743692dbc47, type: 3}
   m_Name: TestItem
   m_EditorClassIdentifier: 
-  itemName: TestName
+  itemName: Test Item - Cube
   icon: {fileID: 0}
   description: 
-  isStackable: 1
-  maxStack: 10
