@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6b51b792d30834e9bc6743692dbc47, type: 3}
   m_Name: TestItem1
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: TestItem NonStack
   icon: {fileID: 0}
   description: 
   isStackable: 0

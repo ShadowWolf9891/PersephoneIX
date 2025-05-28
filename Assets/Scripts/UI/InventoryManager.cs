@@ -20,7 +20,7 @@ public class InventoryManager : MonoBehaviour
     public void Add(InventoryItemData itemData)
     {
         //checks if item is currently in inventory
-        if (itemDictionary.TryGetValue((itemData), out InventoryItem item))
+        if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
         {
             //**checks if item is stackable before adding item, might need changed
             if (itemData.isStackable) item.AddItem();
@@ -37,7 +37,7 @@ public class InventoryManager : MonoBehaviour
     }
     public void Remove(InventoryItemData itemData)
     {
-        if (itemDictionary.TryGetValue((itemData), out InventoryItem item))
+        if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
         {
             //removes the item then checks if that was last item in stack before removing from list/dictionary
             item.RemoveItem();
