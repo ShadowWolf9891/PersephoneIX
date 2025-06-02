@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// A condition node checks if a condition is true and returns either success or failure.
+/// A condition node checks if a condition is true and returns either success or failure. This class currently keeps things organized
+/// and allows for condition nodes to be grouped together. Condition nodes do not have children.
 /// </summary>
 public abstract class BTConditionNode : BTNode
 {
-	private readonly Func<bool> condition;
+	//Example implementation
 
-	public BTConditionNode(Func<bool> condition) => this.condition = condition;
-
-	public override NodeState Tick()
-	{
-		return condition() ? NodeState.SUCCESS : NodeState.FAILURE;
-	}
+	//public override NodeState Tick()
+	//{
+	//	return condition() ? NodeState.SUCCESS : NodeState.FAILURE;
+	//}
 }

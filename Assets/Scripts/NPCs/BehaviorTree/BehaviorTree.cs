@@ -6,18 +6,31 @@ using UnityEngine;
 /// Behavior tree class that contains the root node on creation. Behavior trees are fairly complex, so I suggest researching them
 /// if you plan on using them to control AI or NPC actions.
 /// </summary>
-public class BehaviorTree
+[CreateAssetMenu(menuName = "BehaviorTree/BehaviorTree")]
+public class BehaviorTree : ScriptableObject
 {
-    private BTNode Root;
+	public BTNode rootNode;
+	public List<BTNode> nodes = new();
 
-    public BehaviorTree(BTNode root)
-    { this.Root = root; }
+	public void AddNode(BTNode node)
+	{
+		nodes.Add(node);
+		if(node.Name == "")
+		{
+			node.Name = node.GetType().Name;
+		}
+		node.name = node.Name;
+	}
+	public void RemoveNode(BTNode node)
+	{
+		nodes.Remove(node);
+	}
 
-    /// <summary>
-    /// Send a tick down the chain of the behavior tree.
-    /// </summary>
-    public void Tick()
+	/// <summary>
+	/// Send a tick down the chain of the behavior tree.
+	/// </summary>
+	public NodeState Tick()
     {
-        Root.Tick();
-    }
+		return rootNode != null ? rootNode.Tick() : NodeState.FAILURE;
+	}
 }
