@@ -17,6 +17,7 @@ public class BehaviorTreeEditor : EditorWindow
 	private bool movingNode;
 	private bool drawingConnection;
 	Vector2 curOffset = Vector2.zero;
+	Vector2 viewOffset = Vector2.zero;
 	
 
 	[MenuItem("Window/Behavior Tree Editor")]
@@ -87,8 +88,9 @@ public class BehaviorTreeEditor : EditorWindow
 
 		// Create the root node (e.g. BTSequence)
 		var rootNode = ScriptableObject.CreateInstance<BTSequence>();
-		rootNode.Name = "RootNode";
 		rootNode.Initialize(new Vector2(100,100));
+		rootNode.Name = "RootNode";
+		rootNode.name = rootNode.Name;
 		rootNode.InputPort = null;
 
 		// Save root node as a subasset of the tree
@@ -115,12 +117,25 @@ public class BehaviorTreeEditor : EditorWindow
 
 	private void DrawNodes()
 	{
-		tree.rootNode.Draw();
+		tree.rootNode.Draw(viewOffset);
+		DrawLines(tree.rootNode);
 		foreach (BTNode node in tree.nodes)
 		{
-			node.Draw();
+			node.Draw(viewOffset);
+			DrawLines(node);
 		}
 	}
+
+	private void DrawLines(BTNode node)
+	{
+		foreach (var child in node.Children)
+		{
+			DrawConnection(node.OutputPort.Center + viewOffset, child.InputPort.Center + viewOffset);
+		}
+	}
+
+
+
 	/// <summary>
 	/// Process GUI events like when nodes are clicked.
 	/// </summary>
@@ -146,6 +161,13 @@ public class BehaviorTreeEditor : EditorWindow
 			}
 			
 		}
+		if (e.type == EventType.MouseDrag && e.button == 2) // Middle mouse button
+		{
+			//Change offset to reflect where things should be drawn
+			viewOffset += e.delta;
+			GUI.changed = true;
+			e.Use();
+		}
 
 		//Select the node and display node editor.
 		if (e.type == EventType.MouseDown && GraphArea.Contains(e.mousePosition) && e.button == (int)MouseButton.Left)
@@ -164,15 +186,8 @@ public class BehaviorTreeEditor : EditorWindow
 			}
 			else if(ClickedOnPort(e.mousePosition, out NodePort clickedPort))
 			{
-				if (clickedPort.PType == PortType.INPUT && clickedPort.HasConnection)
-				{
-					//ShowPortContextMenu(clickedPort);
-				}
-				else
-				{
-					selectedPort = clickedPort;
-					drawingConnection = true;
-				}
+				selectedPort = clickedPort;
+				drawingConnection = true;
 			}
 			else
 			{
@@ -199,7 +214,7 @@ public class BehaviorTreeEditor : EditorWindow
 
 		if(drawingConnection)
 		{
-			DrawConnection(selectedPort.Center, e.mousePosition);
+			DrawConnection(selectedPort.Center + viewOffset, e.mousePosition);
 			GUI.changed = true;
 		}
 
@@ -209,18 +224,16 @@ public class BehaviorTreeEditor : EditorWindow
 
 			if(ClickedOnPort(e.mousePosition,out NodePort clickedPort))
 			{
-				if(selectedPort.PType != clickedPort.PType)
+				if(selectedPort.PType != clickedPort.PType && selectedPort != clickedPort)
 				{
-					if(selectedPort.PType == PortType.OUTPUT) 
+					if(selectedPort.PType == PortType.OUTPUT && !selectedPort.ParentNode.Children.Contains(clickedPort.ParentNode)) 
 					{
-						selectedPort.ConnectedPorts.Add(clickedPort);
 						selectedPort.ParentNode.Children.Add(clickedPort.ParentNode);
 						clickedPort.ParentNode.Parent = selectedPort.ParentNode;
 						
 					}
-					else
+					else if(selectedPort.PType == PortType.INPUT && !clickedPort.ParentNode.Children.Contains(selectedPort.ParentNode))
 					{
-						clickedPort.ConnectedPorts.Add(selectedPort);
 						clickedPort.ParentNode.Children.Add(selectedPort.ParentNode);
 						selectedPort.ParentNode.Parent = clickedPort.ParentNode;
 					}
@@ -248,7 +261,7 @@ public class BehaviorTreeEditor : EditorWindow
 	}
 	private void ShowPortContextMenu(NodePort port)
 	{
-		if(port.HasConnection) 
+		if(port.ParentNode.Children.Count > 0) 
 		{
 			GenericMenu menu = new GenericMenu();
 			menu.AddItem(new GUIContent("Break Connection"), false, () => RemoveConnection(port));
@@ -259,7 +272,7 @@ public class BehaviorTreeEditor : EditorWindow
 
 	private bool ClickedOnNode(Vector2 mousePosition, out BTNode clickedNode)
 	{
-		
+		mousePosition -= viewOffset;
 		if (tree.rootNode.NodeRect.Contains(mousePosition))
 		{
 			clickedNode = tree.rootNode;
@@ -280,7 +293,8 @@ public class BehaviorTreeEditor : EditorWindow
 
 	private bool ClickedOnPort(Vector2 mousePosition, out NodePort clickedPort)
 	{
-		if(tree.rootNode.OutputPort.Contains(mousePosition))
+		mousePosition -= viewOffset;
+		if (tree.rootNode.OutputPort.Contains(mousePosition))	
 		{
 			clickedPort = tree.rootNode.OutputPort;
 			return true;
@@ -305,37 +319,33 @@ public class BehaviorTreeEditor : EditorWindow
 
 	private void CreateNode<T>(Vector2 pos) where T : BTNode
 	{
+		pos -= viewOffset;
 		var node = ScriptableObject.CreateInstance<T>();
 		node.Initialize(pos);
 		tree.AddNode(node);
-		AssetDatabase.AddObjectToAsset(node, tree);
-		AssetDatabase.SaveAssets();
 	}
 	private void DeleteNode(BTNode node)
 	{
-		AssetDatabase.RemoveObjectFromAsset(node);
-		AssetDatabase.SaveAssets();
+		RemoveConnection(node.InputPort);
+		RemoveConnection(node.OutputPort);
 
-		foreach(var connection in node.OutputPort.ConnectedPorts)
-		{ 
-			RemoveConnection(connection);
-		}
-		foreach (var connection in node.InputPort.ConnectedPorts)
+		if (selectedNode == node)
 		{
-			RemoveConnection(connection);
+			selectedNode = null;
+			nodeEditor = null;
 		}
-
 		tree.RemoveNode(node);
+		GUI.changed = true;
 	}
 
 	void DrawConnection(Vector2 startPos, Vector2 endPos)
 	{
 		Handles.BeginGUI();
 		Vector2 startTangent = startPos + Vector2.right * 50f;
-		Vector2 endTangent = endPos + Vector2.left * 50f;
+		Vector2 endTangent = endPos +Vector2.left * 50f;
 
 		Handles.DrawBezier(
-			startPos,
+			startPos ,
 			endPos,
 			startTangent,
 			endTangent,
@@ -347,20 +357,26 @@ public class BehaviorTreeEditor : EditorWindow
 	}
 	void RemoveConnection(NodePort nodePort)
 	{
-		if (nodePort.PType == PortType.OUTPUT)
+		if(nodePort.PType == PortType.INPUT) 
 		{
-			nodePort.ConnectedPorts.Clear();
+			BTNode child = nodePort.ParentNode;
+			BTNode parent = child.Parent;
+
+			if (parent != null)
+			{
+				parent.Children.Remove(child);
+				child.Parent = null;
+			}
+		}
+		else if(nodePort.PType == PortType.OUTPUT)
+		{
+			foreach(var child in nodePort.ParentNode.Children)
+			{
+				child.Parent = null;
+			}
 			nodePort.ParentNode.Children.Clear();
 		}
-		else
-		{
-			nodePort.ParentNode.Parent.OutputPort.ConnectedPorts.Remove(nodePort);
-			nodePort.ParentNode.Parent.Children.Remove(nodePort.ParentNode);
-			nodePort.ParentNode.Parent = null;
-		}
 
-
-		nodePort.ConnectedPorts.Clear();
 		
 		GUI.changed = true;
 	}

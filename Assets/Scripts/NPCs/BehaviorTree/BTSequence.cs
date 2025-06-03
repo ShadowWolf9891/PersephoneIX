@@ -18,11 +18,11 @@ public class BTSequence : BTNode
 		InputPort = new NodePort(this, PortType.INPUT);
 		OutputPort = new NodePort(this, PortType.OUTPUT);
 	}
-	public override void Draw()
+	public override void Draw(Vector2 viewOffset)
 	{
-		base.Draw();
-		InputPort?.Draw();
-		OutputPort?.Draw();
+		base.Draw(viewOffset);
+		InputPort?.Draw(viewOffset);
+		OutputPort?.Draw(viewOffset);
 	}
 	public override void Move(Vector2 position)
 	{

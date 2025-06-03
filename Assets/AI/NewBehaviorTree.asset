@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6834030203747083463
+--- !u!114 &-1890538964007647938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,36 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e93d1dc14eb68a44eb2a2e4aeabd50e6, type: 3}
-  m_Name: BTSequence
+  m_Name: RootNode
   m_EditorClassIdentifier: 
-  NodeRect:
-    serializedVersion: 2
-    x: 167.2
-    y: 425.6
-    width: 120
-    height: 60
-  Name: BTSequence
-  Parent: {fileID: 0}
-  Children: []
---- !u!114 &-723555292192181449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e93d1dc14eb68a44eb2a2e4aeabd50e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Name: RootNode
   NodeRect:
     serializedVersion: 2
     x: 100
     y: 100
     width: 120
     height: 60
-  Name: RootNode
   Parent: {fileID: 0}
   Children: []
 --- !u!114 &11400000
@@ -54,12 +33,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199428a7a8f42de44a10dc7461dad8f2, type: 3}
   m_Name: NewBehaviorTree
   m_EditorClassIdentifier: 
-  rootNode: {fileID: -723555292192181449}
+  rootNode: {fileID: -1890538964007647938}
   nodes:
-  - {fileID: 4796032199748199140}
-  - {fileID: 6620734425199264000}
-  - {fileID: -6834030203747083463}
---- !u!114 &4796032199748199140
+  - {fileID: 6978036506620364501}
+--- !u!114 &6978036506620364501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,34 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93d1dc14eb68a44eb2a2e4aeabd50e6, type: 3}
   m_Name: BTSequence
   m_EditorClassIdentifier: 
-  NodeRect:
-    serializedVersion: 2
-    x: 149.6
-    y: 276.80002
-    width: 120
-    height: 60
   Name: BTSequence
-  Parent: {fileID: -723555292192181449}
-  Children:
-  - {fileID: 6620734425199264000}
---- !u!114 &6620734425199264000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8282a6902d0064aafec0d4e900c205, type: 3}
-  m_Name: BTSelector
-  m_EditorClassIdentifier: 
   NodeRect:
     serializedVersion: 2
-    x: 291.19998
-    y: 410.40002
+    x: 349.6
+    y: 288.00003
     width: 120
     height: 60
-  Name: BTSelector
-  Parent: {fileID: 4796032199748199140}
+  Parent: {fileID: 0}
   Children: []

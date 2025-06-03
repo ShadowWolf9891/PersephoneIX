@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -20,10 +22,14 @@ public class BehaviorTree : ScriptableObject
 			node.Name = node.GetType().Name;
 		}
 		node.name = node.Name;
+		AssetDatabase.AddObjectToAsset(node, this);
+		AssetDatabase.SaveAssets();
 	}
 	public void RemoveNode(BTNode node)
 	{
 		nodes.Remove(node);
+		AssetDatabase.RemoveObjectFromAsset(node);
+		AssetDatabase.SaveAssets();
 	}
 
 	/// <summary>

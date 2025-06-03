@@ -12,14 +12,15 @@ public abstract class BTNode : ScriptableObject
 	public static float DefaultWidth = 120f;
 	public static float DefaultHeight = 60;
 
-	public Rect NodeRect;
-
 	public string Name = "";
+	public Rect NodeRect;
 
 	public NodePort InputPort;
 	public NodePort OutputPort;
 
+	[HideInInspector]
 	public BTNode Parent;
+	[HideInInspector]
 	public List<BTNode> Children;
 	/// <summary>
 	/// Defualt constructor for when this node does not care about any other objects in the game.
@@ -48,9 +49,10 @@ public abstract class BTNode : ScriptableObject
 	/// <returns></returns>
 	public abstract NodeState Tick();
 
-	public virtual void Draw()
+	public virtual void Draw(Vector2 viewOffset)
 	{
-		GUI.Box(NodeRect, Name);
+		var adjustedRect = new Rect(NodeRect.position + viewOffset, NodeRect.size);
+		GUI.Box(adjustedRect, Name);
 	}
 
 	public virtual void Move(Vector2 position)

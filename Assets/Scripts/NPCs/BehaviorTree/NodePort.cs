@@ -12,14 +12,12 @@ public class NodePort
 	public BTNode ParentNode { get; private set; }
 	public Rect Rect { get; private set; }
 	public PortType PType { get; private set; }
-	public List<NodePort> ConnectedPorts { get; set; }
 	public string Label { get; private set; }
 
 	private const float Size = 10f;
 	Texture2D tex;
 	public NodePort(BTNode parent, PortType type, string label = "")
 	{
-		ConnectedPorts = new List<NodePort>();
 		ParentNode = parent;
 		PType = type;
 		Label = label;
@@ -30,43 +28,11 @@ public class NodePort
 
 	public Vector2 Center => new Vector2(Rect.x + Rect.width / 2, Rect.y + Rect.height / 2);
 
-	public bool HasConnection => ConnectedPorts.Count > 0;
-
-	public void Draw()
+	public void Draw(Vector2 viewOffset)
 	{
-		if (tex != null)
-			GUI.DrawTexture(Rect, tex, ScaleMode.ScaleToFit);
-		else
-		{
-			// Fallback if texture is missing
-			GUI.color = PType == PortType.INPUT ? Color.green : Color.cyan;
-			GUI.Box(Rect, "");
-			GUI.color = Color.white;
-		}
-
-		if(HasConnection)
-		{
-			Handles.BeginGUI();
-			Vector2 startTangent = Center + Vector2.right * 50f;
-
-			foreach (NodePort cPort in ConnectedPorts)
-			{
-				Vector2 endTangent = cPort.Center + Vector2.left * 50f;
-
-				Handles.DrawBezier(
-					Center,
-					cPort.Center,
-					startTangent,
-					endTangent,
-					Color.white,
-					null,
-					4f
-				);
-
-			}
-			Handles.EndGUI();
-		}
-
+		if (tex == null) return;
+		var adjustedRect = new Rect(Rect.position + viewOffset, Rect.size);
+		GUI.DrawTexture(adjustedRect, tex, ScaleMode.ScaleToFit);
 	}
 
 	public bool Contains(Vector2 point) => Rect.Contains(point);
