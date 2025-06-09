@@ -10,8 +10,8 @@ using UnityEngine;
 [Serializable]
 public class BTActionNode : BTNode
 {
-	[Tooltip("The inspector name of the object you want to execute the function of.")]
-	public string targetName;
+	//[Tooltip("The inspector name of the object you want to execute the function of.")]
+	//public string targetName;
 	[Tooltip("The name of the function you want to execute.")]
 	public string functionName;
 	public override void Initialize(Vector2 position, BTBlackboard bb)
