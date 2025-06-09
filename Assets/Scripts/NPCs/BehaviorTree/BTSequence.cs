@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -8,12 +9,12 @@ using UnityEngine.XR;
 /// <summary>
 /// A sequence node runs its children in order until it fails.
 /// </summary>
-[CreateAssetMenu(menuName = "BehaviorTree/Composite/Sequence")]
+[CreateAssetMenu(menuName = "BehaviorTree/Composite/Sequence"), Serializable]
 public class BTSequence : BTNode
 {
-	public override void Initialize(Vector2 position)
+	public override void Initialize(Vector2 position, BTBlackboard bb)
 	{
-		base.Initialize(position);
+		base.Initialize(position, bb);
 		Children = new List<BTNode>();
 		InputPort = new NodePort(this, PortType.INPUT);
 		OutputPort = new NodePort(this, PortType.OUTPUT);
@@ -30,11 +31,11 @@ public class BTSequence : BTNode
 		InputPort?.SetPosition(position, (NodeRect.width - InputPort.Rect.width) / 2);
 		OutputPort?.SetPosition(position, (NodeRect.width - OutputPort.Rect.width) / 2);
 	}
-	public override NodeState Tick()
+	public override NodeState Execute(GameObject context)
 	{
 		foreach (var child in Children)
 		{
-			var result = child.Tick();
+			var result = child.Tick(context);
 			if (result != NodeState.SUCCESS)
 				return result;
 		}

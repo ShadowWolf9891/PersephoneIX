@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
@@ -8,7 +9,7 @@ using UnityEngine;
 /// Behavior tree class that contains the root node on creation. Behavior trees are fairly complex, so I suggest researching them
 /// if you plan on using them to control AI or NPC actions.
 /// </summary>
-[CreateAssetMenu(menuName = "BehaviorTree/BehaviorTree")]
+[CreateAssetMenu(menuName = "BehaviorTree/BehaviorTree"), Serializable]
 public class BehaviorTree : ScriptableObject
 {
 	public BTNode rootNode;
@@ -35,8 +36,9 @@ public class BehaviorTree : ScriptableObject
 	/// <summary>
 	/// Send a tick down the chain of the behavior tree.
 	/// </summary>
-	public NodeState Tick()
+	public NodeState Tick(GameObject context)
     {
-		return rootNode != null ? rootNode.Tick() : NodeState.FAILURE;
+		rootNode.ResetStatus();
+		return rootNode != null ? rootNode.Tick(context) : NodeState.FAILURE;
 	}
 }

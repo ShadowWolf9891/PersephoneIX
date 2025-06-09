@@ -8,9 +8,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BehaviorTree/Composite/Selector")]
 public class BTSelector : BTNode
 {
-	public override void Initialize(Vector2 position)
+	public override void Initialize(Vector2 position, BTBlackboard bb)
 	{
-		base.Initialize(position);
+		base.Initialize(position, bb);
 		Children = new List<BTNode>();
 		InputPort = new NodePort(this, PortType.INPUT);
 		OutputPort = new NodePort(this, PortType.OUTPUT);
@@ -27,11 +27,11 @@ public class BTSelector : BTNode
 		InputPort?.SetPosition(position, (NodeRect.width - InputPort.Rect.width) / 2);
 		OutputPort?.SetPosition(position, (NodeRect.width - OutputPort.Rect.width) / 2);
 	}
-	public override NodeState Tick()
+	public override NodeState Execute(GameObject context)
 	{
 		foreach (var child in Children)
 		{
-			var result = child.Tick();
+			var result = child.Tick(context);
 			if (result != NodeState.FAILURE)
 				return result;
 		}

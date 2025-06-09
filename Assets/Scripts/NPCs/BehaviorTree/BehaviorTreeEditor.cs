@@ -11,7 +11,8 @@ using UnityEngine;
 public class BehaviorTreeEditor : EditorWindow
 {
     private BehaviorTree tree;
-	private Editor nodeEditor;
+	private BTBlackboard bb;
+	private NodeInspector nodeEditor;
 	private BTNode selectedNode;
 	private NodePort selectedPort;
 	private bool movingNode;
@@ -42,6 +43,10 @@ public class BehaviorTreeEditor : EditorWindow
 		{
 			LoadTree();
 		}
+		//if (GUILayout.Button("Tick Tree", EditorStyles.toolbarButton))
+		//{
+		//	tree.Tick();
+		//}
 		GUILayout.Space(300);
 		GUILayout.EndHorizontal();
 		GUILayout.BeginHorizontal();
@@ -86,9 +91,12 @@ public class BehaviorTreeEditor : EditorWindow
 		// Create the BehaviorTree asset
 		tree = ScriptableObject.CreateInstance<BehaviorTree>();
 
+		//Create blackboard
+		bb = ScriptableObject.CreateInstance<BTBlackboard>();
+		
 		// Create the root node (e.g. BTSequence)
 		var rootNode = ScriptableObject.CreateInstance<BTSequence>();
-		rootNode.Initialize(new Vector2(100,100));
+		rootNode.Initialize(new Vector2(100,100), bb);
 		rootNode.Name = "RootNode";
 		rootNode.name = rootNode.Name;
 		rootNode.InputPort = null;
@@ -96,10 +104,11 @@ public class BehaviorTreeEditor : EditorWindow
 		// Save root node as a subasset of the tree
 		AssetDatabase.CreateAsset(tree, path);
 		AssetDatabase.AddObjectToAsset(rootNode, tree);
-
+		AssetDatabase.AddObjectToAsset(bb, tree);
 		// Assign root node and mark tree dirty (means it must be saved by editor)
 		tree.rootNode = rootNode;
 		EditorUtility.SetDirty(tree);
+		EditorUtility.SetDirty(bb);
 
 		// Save and refresh
 		AssetDatabase.SaveAssets();
@@ -113,8 +122,26 @@ public class BehaviorTreeEditor : EditorWindow
 		string path = EditorUtility.OpenFilePanel("Load Behavior Tree", "Assets", "asset");
 		path = FileUtil.GetProjectRelativePath(path);
 		tree = AssetDatabase.LoadAssetAtPath<BehaviorTree>(path);
-	}
 
+		if (tree != null)
+		{
+			// Find blackboard among subassets
+			var subAssets = AssetDatabase.LoadAllAssetsAtPath(path);
+			foreach (var asset in subAssets)
+			{
+				if (asset is BTBlackboard blackboard)
+				{
+					bb = blackboard;
+					break;
+				}
+			}
+
+			if (bb == null)
+			{
+				Debug.LogWarning("Blackboard not found in tree asset.");
+			}
+		}
+	}
 	private void DrawNodes()
 	{
 		tree.rootNode.Draw(viewOffset);
@@ -165,6 +192,7 @@ public class BehaviorTreeEditor : EditorWindow
 		{
 			//Change offset to reflect where things should be drawn
 			viewOffset += e.delta;
+			tree.rootNode?.ResetStatus();
 			GUI.changed = true;
 			e.Use();
 		}
@@ -178,7 +206,7 @@ public class BehaviorTreeEditor : EditorWindow
 					DestroyImmediate(nodeEditor);
 
 				// Create a cached editor for the selected node
-				nodeEditor = Editor.CreateEditor(clickedNode);
+				nodeEditor = (NodeInspector)Editor.CreateEditor(clickedNode);
 				curOffset = clickedNode.NodeRect.position - e.mousePosition;
 				movingNode = true;
 				selectedNode = clickedNode;
@@ -202,12 +230,14 @@ public class BehaviorTreeEditor : EditorWindow
 		{
 			movingNode = false;
 			curOffset = Vector2.zero;
+			tree.rootNode?.ResetStatus();
 			e.Use();
 		}
 
 		if (movingNode && e.type == EventType.MouseDrag && e.button == (int)MouseButton.Left)
 		{
-			selectedNode.Move(e.mousePosition + curOffset);	
+			selectedNode.Move(e.mousePosition + curOffset);
+			tree.rootNode?.ResetStatus();
 			GUI.changed = true;
 			e.Use();
 		}
@@ -215,6 +245,7 @@ public class BehaviorTreeEditor : EditorWindow
 		if(drawingConnection)
 		{
 			DrawConnection(selectedPort.Center + viewOffset, e.mousePosition);
+			tree.rootNode?.ResetStatus();
 			GUI.changed = true;
 		}
 
@@ -228,12 +259,23 @@ public class BehaviorTreeEditor : EditorWindow
 				{
 					if(selectedPort.PType == PortType.OUTPUT && !selectedPort.ParentNode.Children.Contains(clickedPort.ParentNode)) 
 					{
+						if (selectedPort.ParentNode is BTDecorator) //Decorators can only have 1 child.
+						{
+							RemoveConnection(selectedPort);
+							tree.rootNode?.ResetStatus();
+							GUI.changed = true;
+						}
 						selectedPort.ParentNode.Children.Add(clickedPort.ParentNode);
 						clickedPort.ParentNode.Parent = selectedPort.ParentNode;
-						
 					}
 					else if(selectedPort.PType == PortType.INPUT && !clickedPort.ParentNode.Children.Contains(selectedPort.ParentNode))
 					{
+						if (clickedPort.ParentNode is BTDecorator) //Decorators can only have 1 child.
+						{
+							RemoveConnection(clickedPort);
+							tree.rootNode?.ResetStatus();
+							GUI.changed = true;
+						}
 						clickedPort.ParentNode.Children.Add(selectedPort.ParentNode);
 						selectedPort.ParentNode.Parent = clickedPort.ParentNode;
 					}
@@ -249,6 +291,9 @@ public class BehaviorTreeEditor : EditorWindow
 		GenericMenu menu = new GenericMenu();
 		menu.AddItem(new GUIContent("Add/Sequence Node"), false, () => CreateNode<BTSequence>(position));
 		menu.AddItem(new GUIContent("Add/Selector Node"), false, () => CreateNode<BTSelector>(position));
+		menu.AddItem(new GUIContent("Add/Action Node"), false, () => CreateNode<BTActionNode>(position));
+		menu.AddItem(new GUIContent("Add/Condition Node"), false, () => CreateNode<BTConditionNode>(position));
+		menu.AddItem(new GUIContent("Add/Decorator/Inverter Node"), false, () => CreateNode<BTInverter>(position));
 		menu.ShowAsContext();
 	}
 	private void ShowNodeContextMenu(BTNode node)
@@ -302,12 +347,12 @@ public class BehaviorTreeEditor : EditorWindow
 
 		foreach (BTNode node in tree.nodes)
 		{
-			if (node.InputPort.Contains(mousePosition))
+			if (node.InputPort != null && node.InputPort.Contains(mousePosition))
 			{
 				clickedPort = node.InputPort;
 				return true;
 			}
-			if (node.OutputPort.Contains(mousePosition))
+			if (node.OutputPort!= null && node.OutputPort.Contains(mousePosition))
 			{
 				clickedPort = node.OutputPort;
 				return true;
@@ -321,8 +366,9 @@ public class BehaviorTreeEditor : EditorWindow
 	{
 		pos -= viewOffset;
 		var node = ScriptableObject.CreateInstance<T>();
-		node.Initialize(pos);
+		node.Initialize(pos, bb);
 		tree.AddNode(node);
+		tree.rootNode?.ResetStatus();
 	}
 	private void DeleteNode(BTNode node)
 	{
@@ -377,7 +423,7 @@ public class BehaviorTreeEditor : EditorWindow
 			nodePort.ParentNode.Children.Clear();
 		}
 
-		
+		tree.rootNode?.ResetStatus();
 		GUI.changed = true;
 	}
 
