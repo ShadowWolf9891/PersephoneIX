@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EasyBehaviorTree;
+using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -8,8 +10,13 @@ public class EnemyBehavior : MonoBehaviour
     BehaviorTree bt;
     [SerializeField]
     LayerMask layerMask;
+
+    [SerializeField]
+    private float rotationSpeed = 5f;
+
+
     private BTBlackboard bb;
-    private Rigidbody rb;
+    private NavMeshAgent agent;
 
     private GameObject player;
 
@@ -19,7 +26,7 @@ public class EnemyBehavior : MonoBehaviour
 		bb = bt.rootNode.GetBlackboard();
         bb.Set<bool>("CanSeePlayer", false);
         bt.rootNode.ResetStatus();
-        rb = GetComponent<Rigidbody>();
+        agent = GetComponent<NavMeshAgent>();
 	}
 
     // Update is called once per frame
@@ -50,9 +57,20 @@ public class EnemyBehavior : MonoBehaviour
 
     public void MoveToPlayer()
     {
-        Vector3 playerLocation = player.transform.position;
-        rb.MovePosition(playerLocation);
-        Debug.Log("Moving to Player");
-    }
-    
+        agent.SetDestination(player.transform.position);
+        RotateToFacePlayer();
+	}
+
+	void RotateToFacePlayer()
+	{
+		Vector3 direction = (player.transform.position - transform.position).normalized;
+		direction.y = 0f; // Ignore vertical difference to keep upright
+
+		if (direction.magnitude > 0.1f)
+		{
+			Quaternion lookRotation = Quaternion.LookRotation(direction);
+			transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+		}
+	}
+
 }

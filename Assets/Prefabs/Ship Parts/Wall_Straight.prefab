@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6935660753608914036}
   - component: {fileID: 8022014043972271088}
   - component: {fileID: 2440850676687502617}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 419991126485886676}
   - component: {fileID: 8468205753130668548}
   - component: {fileID: 4425176975503398204}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 7813914162547941646}
   - component: {fileID: 8431325476882516342}
   - component: {fileID: 5448370634279850069}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7588189224268222482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 4622585100709828893}
   - component: {fileID: 1406644809616972964}
   - component: {fileID: 2255118961669747258}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7652327936540142646}
-  m_Layer: 0
+  - component: {fileID: 4557881446554907356}
+  m_Layer: 7
   m_Name: Wall_Straight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,6 +542,22 @@ Transform:
   - {fileID: 7588189224268222482}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &4557881446554907356
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214550400280526690}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1.5, z: 0.25}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 1, y: 1.5, z: -0.25}
+  m_TimeToStationary: 0.5
 --- !u!1 &7909222718677726363
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +570,7 @@ GameObject:
   - component: {fileID: 438851688112749052}
   - component: {fileID: 8127711800920270371}
   - component: {fileID: 3772274227354047874}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4553184874576771756}
   - component: {fileID: 3487497397762802124}
   - component: {fileID: 7098279738139287606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7588189224268222482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 4622585100709828893}
   - component: {fileID: 1406644809616972964}
   - component: {fileID: 2255118961669747258}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7652327936540142646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall_Corner_Ext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
