@@ -11,11 +11,31 @@ public class DoorBehavior : MonoBehaviour, IInteractable
 	[SerializeField] bool isLocked;
 	[SerializeField] InputActionReference interactAction;
 
+	[SerializeField] GameObject[] attachedLights;
+	[SerializeField] Material LockedLightMaterial;
+	[SerializeField] Material UnlockedLightMaterial;
+
 	private NavMeshObstacle doorObstacle;
 
 	private void Start()
 	{
 		doorObstacle = GetComponent<NavMeshObstacle>();
+		if(isLocked)
+		{
+			foreach (GameObject light in attachedLights)
+			{
+				light.GetComponent<Light>().color = Color.red;
+				light.GetComponent<MeshRenderer>().material = LockedLightMaterial;
+			}
+		}
+		else
+		{
+			foreach (GameObject light in attachedLights)
+			{
+				light.GetComponent<Light>().color = Color.green;
+				light.GetComponent<MeshRenderer>().material = UnlockedLightMaterial;
+			}
+		}
 	}
 
 	public string GetInteractionPrompt()
@@ -59,5 +79,29 @@ public class DoorBehavior : MonoBehaviour, IInteractable
 		doorObstacle.carving = true;
 	}
 
+	private void UnlockDoor()
+	{
+		if(isLocked) 
+		{
+			isLocked = false;
+			foreach(GameObject light in attachedLights)
+			{
+				light.GetComponent<Light>().color = Color.green;
+				light.GetComponent<MeshRenderer>().material = UnlockedLightMaterial;
+			}
+		}
+	}
+	private void LockDoor()
+	{
+		if (!isLocked)
+		{
+			isLocked = true;
+			foreach (GameObject light in attachedLights)
+			{
+				light.GetComponent<Light>().color = Color.red;
+				light.GetComponent<MeshRenderer>().material = LockedLightMaterial;
+			}
+		}
+	}
 	
 }
