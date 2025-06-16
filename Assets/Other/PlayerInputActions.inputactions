@@ -9,7 +9,7 @@
                     "name": "Movement",
                     "type": "Value",
                     "id": "56e27ac3-5c12-4859-a9ad-5264de8215b6",
-                    "expectedControlType": "Stick",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -18,7 +18,7 @@
                     "name": "Look",
                     "type": "Value",
                     "id": "81114e99-73db-45b5-bd85-20b0c1da2486",
-                    "expectedControlType": "Stick",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -112,59 +112,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Mouse",
-                    "id": "8b33261c-57e4-4308-b03d-7cc4d89af2bc",
-                    "path": "2DVector",
+                    "name": "",
+                    "id": "ecfb72a6-f6fb-4e70-8489-25592a90e306",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Look",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "283f7e54-e47d-4ec7-9666-f5ec3db2be2d",
-                    "path": "<Mouse>/delta/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "221c00f1-a9e9-4edb-800e-1a042563c340",
-                    "path": "<Mouse>/delta/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "084b3545-d54e-44ba-9ac9-2083ad640f51",
-                    "path": "<Mouse>/delta/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "613a135c-5b54-4849-8871-c61d5f9bc0d7",
-                    "path": "<Mouse>/delta/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

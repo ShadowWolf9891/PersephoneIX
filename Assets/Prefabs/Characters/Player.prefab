@@ -867,11 +867,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  LookSensitivityX: 4
-  LookSensitivityY: 2
+  LookSensitivityX: 1
+  LookSensitivityY: 1
   verticalClamp: 85
   cameraRoot: {fileID: 5799516285230901726}
-  smoothTime: 0.05
+  smoothTime: 0.1
 --- !u!114 &2712587085919539902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,7 +942,7 @@ MonoBehaviour:
   interactRange: 2
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 129
   interactionUI: {fileID: 2255170096142377998}
 --- !u!114 &6347686364882587453
 MonoBehaviour:

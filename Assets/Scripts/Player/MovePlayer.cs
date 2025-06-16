@@ -78,7 +78,7 @@ public class MovePlayer : MonoBehaviour
 	{
 		Vector2 targetLook = new Vector2(LookVector.x * LookSensitivityX, LookVector.y * LookSensitivityY);
 		
-		if (targetLook.magnitude < 0.05f)
+		if (targetLook.magnitude < 0.01f)
 			targetLook = Vector2.zero;
 
 		currentLook = Vector2.SmoothDamp(currentLook, targetLook, ref smoothLookVelocity, smoothTime);
