@@ -39,6 +39,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void CheckVision()
     {
+        if(player == null) { return; }
 		if (CanSeeTarget(player))
         {
             bb.Set<bool>("CanSeePlayer", true);

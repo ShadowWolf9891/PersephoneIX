@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour, IGameEventListener<DialogueTrigger
 
 	private void StartDialogue(DialogueData data)
 	{
+		if (IsCompleted(data)) return;
 		Debug.Log("Started Dialogue");
 		dialoguePanel.SetActive(true);
 		currentData = data;

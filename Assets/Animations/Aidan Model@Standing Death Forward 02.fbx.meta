@@ -1,0 +1,1409 @@
+fileFormatVersion: 2
+guid: 6d518c1356d630149b513c5a70f2125d
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 1
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Aidan_Maya_File:Hip_JNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Thigh_JNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Thigh_JNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Knee_JNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Knee_JNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Ankle_JNT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Ankle_JNT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:Spine_A_JNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:Spine_B_JNT
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:Neck_JNT
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:Head_A_JNT
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Clavivle_JNT
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Clavivle_JNT
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Shoulder_JNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Shoulder_JNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Elbow_JNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Elbow_JNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Wrist_JNT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Wrist_JNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Ball_JNT
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Ball_JNT
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_eye_JNT
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_eye_JNT
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:Jaw_JNT
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Thumb_A_JNT
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Thumb_B_JNT
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Thumb_C_JNT
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Index_A_JNT
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Index_B_JNT
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Index_C_JNT
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Middle_A_JNT
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Middle_B_JNT
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Middle_C_JNT
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Ring_A_JNT
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Ring_B_JNT
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Ring_C_JNT
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Pinky_A_JNT
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Pinky_B_JNT
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:L_Pinky_C_JNT
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Thumb_A_JNT
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Thumb_B_JNT
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Thumb_C_JNT
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Index_A_JNT
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Index_B_JNT
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Index_C_JNT
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Middle_A_JNT
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Middle_B_JNT
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Middle_C_JNT
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Ring_A_JNT
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Ring_B_JNT
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Ring_C_JNT
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Pinky_A_JNT
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Pinky_B_JNT
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:R_Pinky_C_JNT
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aidan_Maya_File:Spine_C_JNT
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Aidan Model(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Aidan_GRP
+      parentName: Aidan Model(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Aidan_Mesh_GRP
+      parentName: Aidan_Maya_File:Aidan_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Aidan_MESH
+      parentName: Aidan_Maya_File:Aidan_Mesh_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_MESH
+      parentName: Aidan_Maya_File:Aidan_MESH
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_MESH
+      parentName: Aidan_Maya_File:Aidan_MESH
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Sombrancelha_MESH
+      parentName: Aidan_Maya_File:Aidan_MESH
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Sombrancelha_MESH
+      parentName: Aidan_Maya_File:Aidan_MESH
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Data_GRP
+      parentName: Aidan_Maya_File:Aidan_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Joints_GRP
+      parentName: Aidan_Maya_File:Data_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:FACQS_GRP
+      parentName: Aidan_Maya_File:Joints_GRP
+      position: {x: -0, y: 0, z: -1.5987211e-16}
+      rotation: {x: -3.8163916e-17, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_FACQS_JNT_GRP
+      parentName: Aidan_Maya_File:FACQS_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_Less
+      parentName: Aidan_Maya_File:L_Eye_FACQS_JNT_GRP
+      position: {x: -0.032496426, y: 1.6885338, z: 0.1207775}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_Higher
+      parentName: Aidan_Maya_File:L_Eye_FACQS_JNT_GRP
+      position: {x: -0.032496426, y: 1.7045382, z: 0.1207775}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_FACQS_JNT_GRP
+      parentName: Aidan_Maya_File:FACQS_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_Less
+      parentName: Aidan_Maya_File:R_Eye_FACQS_JNT_GRP
+      position: {x: -0.032496426, y: 1.6885338, z: 0.1207775}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_Higher
+      parentName: Aidan_Maya_File:R_Eye_FACQS_JNT_GRP
+      position: {x: -0.032496426, y: 1.7045382, z: 0.1207775}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eyebrow_FACQS_JNT_GRP
+      parentName: Aidan_Maya_File:FACQS_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_Brow_01_JNT
+      parentName: Aidan_Maya_File:L_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.015542824, y: 1.7058253, z: 0.12356698}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_Brow_02_JNT
+      parentName: Aidan_Maya_File:L_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.029745854, y: 1.7112658, z: 0.1265284}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_Brow_03_JNT
+      parentName: Aidan_Maya_File:L_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.046666253, y: 1.7133058, z: 0.11875476}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Eye_Brow_04_JNT
+      parentName: Aidan_Maya_File:L_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.05644748, y: 1.7063315, z: 0.1074759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eyebrow_FACQS_JNT_GRP
+      parentName: Aidan_Maya_File:FACQS_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_Brow_04_JNT
+      parentName: Aidan_Maya_File:R_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.05644748, y: 1.7063315, z: 0.1074759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_Brow_03_JNT
+      parentName: Aidan_Maya_File:R_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.046666253, y: 1.7133058, z: 0.11875476}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_Brow_02_JNT
+      parentName: Aidan_Maya_File:R_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.029745854, y: 1.7112658, z: 0.1265284}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Eye_Brow_01_JNT
+      parentName: Aidan_Maya_File:R_Eyebrow_FACQS_JNT_GRP
+      position: {x: -0.015542824, y: 1.7058253, z: 0.12356698}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Root_JNT
+      parentName: Aidan_Maya_File:Joints_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Hip_JNT
+      parentName: Aidan_Maya_File:Root_JNT
+      position: {x: -0, y: 1.0217475, z: 0.0254948}
+      rotation: {x: 0.028724346, y: 0.028724346, z: -0.7065231, w: 0.7065231}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Spine_A_JNT
+      parentName: Aidan_Maya_File:Hip_JNT
+      position: {x: -0.10171485, y: 0, z: 0.00000010808014}
+      rotation: {x: 0, y: -0.015396622, z: -0, w: 0.9998815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Spine_B_JNT
+      parentName: Aidan_Maya_File:Spine_A_JNT
+      position: {x: -0.08675292, y: 0, z: -0.0005740294}
+      rotation: {x: 0, y: -0.05999443, z: -0, w: 0.99819875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Spine_C_JNT
+      parentName: Aidan_Maya_File:Spine_B_JNT
+      position: {x: -0.079087995, y: 0, z: 0.009033762}
+      rotation: {x: 0, y: -0.027284037, z: -0, w: 0.99962777}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Chest_JNT
+      parentName: Aidan_Maya_File:Spine_C_JNT
+      position: {x: -0.15873408, y: 0, z: -1.0658141e-16}
+      rotation: {x: 0, y: -4.1633363e-17, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Clavivle_JNT
+      parentName: Aidan_Maya_File:Chest_JNT
+      position: {x: -0.05275592, y: -0.07, z: 0.0065842113}
+      rotation: {x: 0.04387012, y: 0.04387012, z: 0.7057446, w: 0.7057446}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Shoulder_JNT
+      parentName: Aidan_Maya_File:L_Clavivle_JNT
+      position: {x: -0.090598, y: -0.019568032, z: -0.021409784}
+      rotation: {x: 0.025229594, y: -0.0033505696, z: 0.02673065, w: 0.9993186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Elbow_JNT
+      parentName: Aidan_Maya_File:L_Shoulder_JNT
+      position: {x: -0.2783096, y: -1.4210854e-15, z: -0.0014276778}
+      rotation: {x: -0.01674802, y: 0.00053332845, z: -0.028216312, w: 0.99946135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Forearm_JNT
+      parentName: Aidan_Maya_File:L_Elbow_JNT
+      position: {x: -0.099999994, y: 5.684342e-16, z: 7.105427e-17}
+      rotation: {x: 0, y: 0.07186927, z: -0, w: 0.99741405}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Wrist_JNT
+      parentName: Aidan_Maya_File:L_Forearm_JNT
+      position: {x: -0.09531758, y: -8.5265126e-16, z: -1.7763568e-17}
+      rotation: {x: 0, y: 0.04938761, z: -0, w: 0.9987797}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_HAND_CTRL_GRP
+      parentName: Aidan_Maya_File:L_Wrist_JNT
+      position: {x: -0.14752078, y: -1.3183198, z: -0.13117957}
+      rotation: {x: 0.07643316, y: -0.22107635, z: -0.2663321, w: 0.93506706}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_INDEX_CTRL_01_GRP
+      parentName: Aidan_Maya_File:L_HAND_CTRL_GRP
+      position: {x: -0.6135334, y: 1.1616845, z: 0.09551091}
+      rotation: {x: -0.08672148, y: 0.20195052, z: 0.3490483, w: 0.91096693}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_INDEX_CTRL_01
+      parentName: Aidan_Maya_File:L_INDEX_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_INDEX_CTRL_02_GRP
+      parentName: Aidan_Maya_File:L_INDEX_CTRL_01
+      position: {x: -0.042090964, y: 0.00018886507, z: -0.00004821338}
+      rotation: {x: 0.00767447, y: -0.0077115754, z: 0.17040804, w: 0.98531353}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_INDEX_CTRL_02
+      parentName: Aidan_Maya_File:L_INDEX_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_INDEX_CTRL_03_GRP
+      parentName: Aidan_Maya_File:L_INDEX_CTRL_02
+      position: {x: -0.027483772, y: 0.001455074, z: -0.000042084725}
+      rotation: {x: 0.0040126904, y: -0.00943969, z: 0.057968352, w: 0.99826574}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_INDEX_CTRL_03
+      parentName: Aidan_Maya_File:L_INDEX_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_CTRL_01_GRP
+      parentName: Aidan_Maya_File:L_HAND_CTRL_GRP
+      position: {x: -0.62792784, y: 1.1540873, z: 0.06834227}
+      rotation: {x: -0.056346823, y: 0.15377046, z: 0.41507944, w: 0.89492387}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_CTRL_01
+      parentName: Aidan_Maya_File:L_Middle_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_CTRL_02_GRP
+      parentName: Aidan_Maya_File:L_Middle_CTRL_01
+      position: {x: -0.042090964, y: 0.00018886507, z: -0.00004821338}
+      rotation: {x: 0.0013426922, y: 0.018539911, z: 0.07222006, w: 0.9972155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_CTRL_02
+      parentName: Aidan_Maya_File:L_Middle_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_CTRL_03_GRP
+      parentName: Aidan_Maya_File:L_Middle_CTRL_02
+      position: {x: -0.035671394, y: -0.00015911204, z: 0.0004469364}
+      rotation: {x: 0.0028930395, y: 0.029682942, z: 0.096961915, w: 0.99484116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_CTRL_03
+      parentName: Aidan_Maya_File:L_Middle_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_RING_CTRL_01_GRP
+      parentName: Aidan_Maya_File:L_HAND_CTRL_GRP
+      position: {x: -0.6305911, y: 1.1443181, z: 0.03929831}
+      rotation: {x: -0.036883574, y: 0.0923285, z: 0.418244, w: 0.9028771}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_RING_CTRL_01
+      parentName: Aidan_Maya_File:L_RING_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_RING_CTRL_02_GRP
+      parentName: Aidan_Maya_File:L_RING_CTRL_01
+      position: {x: -0.036589324, y: 0.0009904964, z: -0.0002528534}
+      rotation: {x: 0.002341032, y: 0.018440463, z: 0.12591827, w: 0.99186647}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_RING_CTRL_02
+      parentName: Aidan_Maya_File:L_RING_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_RING_CTRL_03_GRP
+      parentName: Aidan_Maya_File:L_RING_CTRL_02
+      position: {x: -0.031582866, y: 0.0006469395, z: 0.00020274134}
+      rotation: {x: 0.002239468, y: 0.029739395, z: 0.07505708, w: 0.9967332}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_RING_CTRL_03
+      parentName: Aidan_Maya_File:L_RING_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_PINKIE_CTRL_01_GRP
+      parentName: Aidan_Maya_File:L_HAND_CTRL_GRP
+      position: {x: -0.6252943, y: 1.1366425, z: 0.01533898}
+      rotation: {x: -0.0067516295, y: 0.004728193, z: 0.4962379, w: 0.86814743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_PINKIE_CTRL_01
+      parentName: Aidan_Maya_File:L_PINKIE_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_PINKIE_CTRL_02_GRP
+      parentName: Aidan_Maya_File:L_PINKIE_CTRL_01
+      position: {x: -0.03233727, y: 0.0019381464, z: -0.0004110137}
+      rotation: {x: 0.0007620489, y: 0.033694375, z: 0.10189949, w: 0.99422365}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_PINKIE_CTRL_02
+      parentName: Aidan_Maya_File:L_PINKIE_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_PINKIE_CTRL_03_GRP
+      parentName: Aidan_Maya_File:L_PINKIE_CTRL_02
+      position: {x: -0.022537107, y: 0.0020186624, z: -0.00024508502}
+      rotation: {x: -0.008294294, y: 0.13056678, z: 0.052887145, w: 0.9899932}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_PINKIE_CTRL_03
+      parentName: Aidan_Maya_File:L_PINKIE_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_THUMB_CTRL_01_GRP
+      parentName: Aidan_Maya_File:L_HAND_CTRL_GRP
+      position: {x: -0.57046735, y: 1.1786073, z: 0.09117773}
+      rotation: {x: 0.25152397, y: 0.6616038, z: 0.12373705, w: 0.69548917}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_THUMB_CTRL_01
+      parentName: Aidan_Maya_File:L_THUMB_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_THUMB_CTRL_02_GRP
+      parentName: Aidan_Maya_File:L_THUMB_CTRL_01
+      position: {x: -0.028206907, y: -0.0017777634, z: -0.00010867533}
+      rotation: {x: 0.005488814, y: -0.024213267, z: -0.01932552, w: 0.999505}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_THUMB_CTRL_02
+      parentName: Aidan_Maya_File:L_THUMB_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_THUMB_CTRL_03_GRP
+      parentName: Aidan_Maya_File:L_THUMB_CTRL_02
+      position: {x: -0.03378845, y: 0.0019770216, z: -0.00015324421}
+      rotation: {x: 0.005362756, y: -0.008743584, z: -0.09009239, w: 0.9958806}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_THUMB_CTRL_03
+      parentName: Aidan_Maya_File:L_THUMB_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Hand_Palm_JNT
+      parentName: Aidan_Maya_File:L_Wrist_JNT
+      position: {x: -0.054771107, y: -2.842171e-16, z: -3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_A_JNT
+      parentName: Aidan_Maya_File:L_Wrist_JNT
+      position: {x: -0.12020423, y: -0.009185847, z: -0.0034931004}
+      rotation: {x: -0.03536891, y: -0.05182713, z: 0.111832954, w: 0.99174416}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_B_JNT
+      parentName: Aidan_Maya_File:L_Middle_A_JNT
+      position: {x: -0.042090964, y: 0.00018886507, z: -0.00004821338}
+      rotation: {x: 0.0011221946, y: 0.005593058, z: 0.033102233, w: 0.9994357}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_C_JNT
+      parentName: Aidan_Maya_File:L_Middle_B_JNT
+      position: {x: -0.035671394, y: -0.00015911204, z: 0.0004469364}
+      rotation: {x: 0.002575998, y: 0.015565126, z: 0.039807916, w: 0.99908286}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Middle_C_JNT_END
+      parentName: Aidan_Maya_File:L_Middle_C_JNT
+      position: {x: -0.01784095, y: -7.105427e-16, z: 1.7763567e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Ring_A_JNT
+      parentName: Aidan_Maya_File:L_Wrist_JNT
+      position: {x: -0.113574475, y: -0.015307146, z: -0.032898154}
+      rotation: {x: -0.034317702, y: -0.07359235, z: 0.10033356, w: 0.99163485}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Ring_B_JNT
+      parentName: Aidan_Maya_File:L_Ring_A_JNT
+      position: {x: -0.036589324, y: 0.0009904964, z: -0.0002528534}
+      rotation: {x: 0.001949332, y: 0.00035004306, z: 0.033024184, w: 0.99945265}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Ring_C_JNT
+      parentName: Aidan_Maya_File:L_Ring_B_JNT
+      position: {x: -0.031582866, y: 0.0006469395, z: 0.00020274134}
+      rotation: {x: 0.0019386009, y: 0.014832609, z: 0.027135057, w: 0.9995199}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Ring_C_JNT_END
+      parentName: Aidan_Maya_File:L_Ring_C_JNT
+      position: {x: -0.013845889, y: 0, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Pinky_A_JNT
+      parentName: Aidan_Maya_File:L_Wrist_JNT
+      position: {x: -0.10222936, y: -0.02401813, z: -0.054262348}
+      rotation: {x: -0.048853945, y: -0.06613243, z: 0.11149297, w: 0.9903581}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Pinky_B_JNT
+      parentName: Aidan_Maya_File:L_Pinky_A_JNT
+      position: {x: -0.03233727, y: 0.0019381464, z: -0.0004110137}
+      rotation: {x: -0.00015065068, y: 0.013460587, z: 0.05088863, w: 0.99861366}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Pinky_C_JNT
+      parentName: Aidan_Maya_File:L_Pinky_B_JNT
+      position: {x: -0.022537107, y: 0.0020186624, z: -0.00024508502}
+      rotation: {x: -0.01157652, y: 0.036207642, z: -0.020472849, w: 0.99906754}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Pinky_C_JNT_END
+      parentName: Aidan_Maya_File:L_Pinky_C_JNT
+      position: {x: -0.01262784, y: 0.00006426779, z: -0.00032130367}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Index_A_JNT
+      parentName: Aidan_Maya_File:L_Wrist_JNT
+      position: {x: -0.11807048, y: -0.011095402, z: 0.028048187}
+      rotation: {x: -0.034842756, y: -0.016138123, z: 0.080027506, w: 0.9960528}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Index_B_JNT
+      parentName: Aidan_Maya_File:L_Index_A_JNT
+      position: {x: -0.042090964, y: 0.00018886507, z: -0.00004821338}
+      rotation: {x: 0.008071021, y: -0.0019357328, z: 0.06035016, w: 0.9981428}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Index_C_JNT
+      parentName: Aidan_Maya_File:L_Index_B_JNT
+      position: {x: -0.027483772, y: 0.001455074, z: -0.000042084725}
+      rotation: {x: 0.0041807536, y: -0.004856788, z: 0.012742463, w: 0.9998984}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Index_C_JNT_END
+      parentName: Aidan_Maya_File:L_Index_C_JNT
+      position: {x: -0.0153561365, y: -5.684342e-16, z: 1.7763567e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Thumb_A_JNT
+      parentName: Aidan_Maya_File:L_Wrist_JNT
+      position: {x: -0.07549878, y: -0.019567482, z: 0.044652972}
+      rotation: {x: 0.39718994, y: 0.37088296, z: -0.089534305, w: 0.83466744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Thumb_B_JNT
+      parentName: Aidan_Maya_File:L_Thumb_A_JNT
+      position: {x: -0.028206907, y: -0.0017777634, z: -0.00010867533}
+      rotation: {x: 0.0052967053, y: -0.0112310015, z: 0.02300515, w: 0.9996583}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Thumb_C_JNT
+      parentName: Aidan_Maya_File:L_Thumb_B_JNT
+      position: {x: -0.03378845, y: 0.0019770216, z: -0.00015324421}
+      rotation: {x: 0.005384293, y: -0.006607044, z: -0.06950772, w: 0.99754506}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Thumb_C_JNT_END
+      parentName: Aidan_Maya_File:L_Thumb_C_JNT
+      position: {x: -0.014625801, y: -5.684342e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Neck_JNT
+      parentName: Aidan_Maya_File:Chest_JNT
+      position: {x: -0.07115226, y: 0, z: 0.008880171}
+      rotation: {x: -3.4694474e-18, y: 0.09422727, z: -4.8363436e-35, w: 0.99555075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Head_A_JNT
+      parentName: Aidan_Maya_File:Neck_JNT
+      position: {x: -0.09392222, y: 0, z: 7.105427e-17}
+      rotation: {x: 0, y: -0.015855515, z: -0, w: 0.9998743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Head_B_JNT
+      parentName: Aidan_Maya_File:Head_A_JNT
+      position: {x: -0.07, y: 0, z: -3.5527136e-17}
+      rotation: {x: -7.565729e-17, y: 0.9617904, z: 7.565729e-17, w: 0.27378693}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Head_B_JNT_END
+      parentName: Aidan_Maya_File:Head_B_JNT
+      position: {x: 0.104439124, y: 0, z: -0.061115973}
+      rotation: {x: 0, y: 0.2618586, z: -0, w: 0.96510625}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Jaw_JNT
+      parentName: Aidan_Maya_File:Head_B_JNT
+      position: {x: -0.07126869, y: 2.1479389e-18, z: -0.01008826}
+      rotation: {x: 0, y: -0.29949751, z: -0, w: 0.9540971}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Chin_JNT
+      parentName: Aidan_Maya_File:Jaw_JNT
+      position: {x: -0.06476622, y: 9.860761e-34, z: -8.5265126e-16}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_eye_JNT
+      parentName: Aidan_Maya_File:Head_B_JNT
+      position: {x: -0.025868852, y: -0.032347027, z: -0.073462464}
+      rotation: {x: -0.23630707, y: 0.12732562, z: -0.6664525, w: 0.69554883}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_eye_JNT
+      parentName: Aidan_Maya_File:Head_B_JNT
+      position: {x: -0.025868852, y: 0.03269127, z: -0.073462464}
+      rotation: {x: -0.23631434, y: 0.12731804, z: -0.66645, w: 0.6955502}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Clavivle_JNT
+      parentName: Aidan_Maya_File:Chest_JNT
+      position: {x: -0.05275592, y: 0.07, z: 0.0065842113}
+      rotation: {x: 0.7057446, y: 0.7057446, z: -0.04387012, w: -0.04387012}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Shoulder_JNT
+      parentName: Aidan_Maya_File:R_Clavivle_JNT
+      position: {x: 0.090598, y: 0.019568032, z: 0.021409784}
+      rotation: {x: 0.025229558, y: -0.0033504802, z: 0.026730677, w: 0.9993186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Elbow_JNT
+      parentName: Aidan_Maya_File:R_Shoulder_JNT
+      position: {x: 0.2783096, y: 1.1368684e-15, z: 0.0014276778}
+      rotation: {x: -0.016747974, y: 0.000533263, z: -0.028216701, w: 0.99946135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Forearm_JNT
+      parentName: Aidan_Maya_File:R_Elbow_JNT
+      position: {x: 0.09999941, y: -0.0000024589774, z: -0.0000001834852}
+      rotation: {x: 0, y: 0.07186927, z: -0, w: 0.99741405}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Wrist_JNT
+      parentName: Aidan_Maya_File:R_Forearm_JNT
+      position: {x: 0.09531812, y: 0.0000024589774, z: 0.00000026499538}
+      rotation: {x: 0, y: 0.04938761, z: -0, w: 0.9987797}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_HAND_CTRL_GRP
+      parentName: Aidan_Maya_File:R_Wrist_JNT
+      position: {x: 0.14752078, y: 1.3183198, z: 0.13117957}
+      rotation: {x: -0.22107637, y: -0.07643316, z: 0.9350671, w: 0.2663321}
+      scale: {x: 1, y: 1, z: -1}
+    - name: Aidan_Maya_File:R_INDEX_CTRL_01_GRP
+      parentName: Aidan_Maya_File:R_HAND_CTRL_GRP
+      position: {x: -0.6135334, y: 1.1616845, z: 0.09551091}
+      rotation: {x: -0.08672148, y: 0.20195052, z: 0.3490483, w: 0.91096693}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_INDEX_CTRL_01
+      parentName: Aidan_Maya_File:R_INDEX_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_INDEX_CTRL_02_GRP
+      parentName: Aidan_Maya_File:R_INDEX_CTRL_01
+      position: {x: -0.042090964, y: 0.00018886507, z: -0.00004821338}
+      rotation: {x: 0.00767447, y: -0.0077115754, z: 0.17040804, w: 0.98531353}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_INDEX_CTRL_02
+      parentName: Aidan_Maya_File:R_INDEX_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_INDEX_CTRL_03_GRP
+      parentName: Aidan_Maya_File:R_INDEX_CTRL_02
+      position: {x: -0.027483772, y: 0.001455074, z: -0.000042084725}
+      rotation: {x: 0.0040126904, y: -0.00943969, z: 0.057968352, w: 0.99826574}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_INDEX_CTRL_03
+      parentName: Aidan_Maya_File:R_INDEX_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_CTRL_01_GRP
+      parentName: Aidan_Maya_File:R_HAND_CTRL_GRP
+      position: {x: -0.62792784, y: 1.1540873, z: 0.06834227}
+      rotation: {x: -0.056346823, y: 0.15377046, z: 0.41507944, w: 0.89492387}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_CTRL_01
+      parentName: Aidan_Maya_File:R_Middle_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_CTRL_02_GRP
+      parentName: Aidan_Maya_File:R_Middle_CTRL_01
+      position: {x: -0.042090964, y: 0.00018886507, z: -0.00004821338}
+      rotation: {x: 0.0013426922, y: 0.018539911, z: 0.07222006, w: 0.9972155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_CTRL_02
+      parentName: Aidan_Maya_File:R_Middle_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_CTRL_03_GRP
+      parentName: Aidan_Maya_File:R_Middle_CTRL_02
+      position: {x: -0.035671394, y: -0.00015911204, z: 0.0004469364}
+      rotation: {x: 0.0028930395, y: 0.029682942, z: 0.096961915, w: 0.99484116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_CTRL_03
+      parentName: Aidan_Maya_File:R_Middle_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_RING_CTRL_01_GRP
+      parentName: Aidan_Maya_File:R_HAND_CTRL_GRP
+      position: {x: -0.6305911, y: 1.1443181, z: 0.03929831}
+      rotation: {x: -0.036883574, y: 0.0923285, z: 0.418244, w: 0.9028771}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_RING_CTRL_01
+      parentName: Aidan_Maya_File:R_RING_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_RING_CTRL_02_GRP
+      parentName: Aidan_Maya_File:R_RING_CTRL_01
+      position: {x: -0.036589324, y: 0.0009904964, z: -0.0002528534}
+      rotation: {x: 0.002341032, y: 0.018440463, z: 0.12591827, w: 0.99186647}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_RING_CTRL_02
+      parentName: Aidan_Maya_File:R_RING_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_RING_CTRL_03_GRP
+      parentName: Aidan_Maya_File:R_RING_CTRL_02
+      position: {x: -0.031582866, y: 0.0006469395, z: 0.00020274134}
+      rotation: {x: 0.002239468, y: 0.029739395, z: 0.07505708, w: 0.9967332}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_RING_CTRL_03
+      parentName: Aidan_Maya_File:R_RING_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_PINKIE_CTRL_01_GRP
+      parentName: Aidan_Maya_File:R_HAND_CTRL_GRP
+      position: {x: -0.6252943, y: 1.1366425, z: 0.01533898}
+      rotation: {x: -0.0067516295, y: 0.004728193, z: 0.4962379, w: 0.86814743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_PINKIE_CTRL_01
+      parentName: Aidan_Maya_File:R_PINKIE_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_PINKIE_CTRL_02_GRP
+      parentName: Aidan_Maya_File:R_PINKIE_CTRL_01
+      position: {x: -0.03233727, y: 0.0019381464, z: -0.0004110137}
+      rotation: {x: 0.0007620489, y: 0.033694375, z: 0.10189949, w: 0.99422365}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_PINKIE_CTRL_02
+      parentName: Aidan_Maya_File:R_PINKIE_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_PINKIE_CTRL_03_GRP
+      parentName: Aidan_Maya_File:R_PINKIE_CTRL_02
+      position: {x: -0.022537107, y: 0.0020186624, z: -0.00024508502}
+      rotation: {x: -0.008294294, y: 0.13056678, z: 0.052887145, w: 0.9899932}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_PINKIE_CTRL_03
+      parentName: Aidan_Maya_File:R_PINKIE_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_THUMB_CTRL_01_GRP
+      parentName: Aidan_Maya_File:R_HAND_CTRL_GRP
+      position: {x: -0.57046735, y: 1.1786073, z: 0.09117773}
+      rotation: {x: 0.25152397, y: 0.6616038, z: 0.12373705, w: 0.69548917}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_THUMB_CTRL_01
+      parentName: Aidan_Maya_File:R_THUMB_CTRL_01_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_THUMB_CTRL_02_GRP
+      parentName: Aidan_Maya_File:R_THUMB_CTRL_01
+      position: {x: -0.028206907, y: -0.0017777634, z: -0.00010867533}
+      rotation: {x: 0.005488814, y: -0.024213267, z: -0.01932552, w: 0.999505}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_THUMB_CTRL_02
+      parentName: Aidan_Maya_File:R_THUMB_CTRL_02_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_THUMB_CTRL_03_GRP
+      parentName: Aidan_Maya_File:R_THUMB_CTRL_02
+      position: {x: -0.03378845, y: 0.0019770216, z: -0.00015324421}
+      rotation: {x: 0.005362756, y: -0.008743584, z: -0.09009239, w: 0.9958806}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_THUMB_CTRL_03
+      parentName: Aidan_Maya_File:R_THUMB_CTRL_03_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Hand_Palm_JNT
+      parentName: Aidan_Maya_File:R_Wrist_JNT
+      position: {x: 0.05477137, y: 0.0000007316574, z: 0.00000016380768}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_A_JNT
+      parentName: Aidan_Maya_File:R_Wrist_JNT
+      position: {x: 0.12020225, y: 0.009181816, z: 0.0034919765}
+      rotation: {x: -0.035368945, y: -0.051818315, z: 0.11181157, w: 0.991747}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_B_JNT
+      parentName: Aidan_Maya_File:R_Middle_A_JNT
+      position: {x: 0.042091053, y: -0.00018842475, z: 0.000048265316}
+      rotation: {x: 0.0011237368, y: 0.005601045, z: 0.033063952, w: 0.9994369}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_C_JNT
+      parentName: Aidan_Maya_File:R_Middle_B_JNT
+      position: {x: 0.03567693, y: 0.00016243439, z: -0.00044510636}
+      rotation: {x: 0.002575562, y: 0.015531262, z: 0.03990498, w: 0.9990795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Middle_C_JNT_END
+      parentName: Aidan_Maya_File:R_Middle_C_JNT
+      position: {x: 0.01783543, y: -0.000002020159, z: -0.0000015689194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Ring_A_JNT
+      parentName: Aidan_Maya_File:R_Wrist_JNT
+      position: {x: 0.11357269, y: 0.015303911, z: 0.0328972}
+      rotation: {x: -0.034316584, y: -0.07358407, z: 0.10032445, w: 0.99163646}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Ring_B_JNT
+      parentName: Aidan_Maya_File:R_Ring_A_JNT
+      position: {x: 0.03658965, y: -0.0009906297, z: 0.0002529386}
+      rotation: {x: 0.001950386, y: 0.00035184604, z: 0.032998625, w: 0.9994534}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Ring_C_JNT
+      parentName: Aidan_Maya_File:R_Ring_B_JNT
+      position: {x: 0.031584825, y: -0.00064550847, z: -0.00020238954}
+      rotation: {x: 0.0019384307, y: 0.014827356, z: 0.027175937, w: 0.9995189}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Ring_C_JNT_END
+      parentName: Aidan_Maya_File:R_Ring_C_JNT
+      position: {x: 0.013844533, y: -0.00000037094256, z: -0.00000033466762}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Pinky_A_JNT
+      parentName: Aidan_Maya_File:R_Wrist_JNT
+      position: {x: 0.102229364, y: 0.024018662, z: 0.054262374}
+      rotation: {x: -0.048845716, y: -0.06613005, z: 0.111511834, w: 0.9903565}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Pinky_B_JNT
+      parentName: Aidan_Maya_File:R_Pinky_A_JNT
+      position: {x: 0.03233459, y: -0.0019405779, z: 0.00041093375}
+      rotation: {x: -0.00015142185, y: 0.013454461, z: 0.050846357, w: 0.9986159}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Pinky_C_JNT
+      parentName: Aidan_Maya_File:R_Pinky_B_JNT
+      position: {x: 0.02253667, y: -0.0020185306, z: 0.00024510315}
+      rotation: {x: -0.011568752, y: 0.036230575, z: -0.020496689, w: 0.9990663}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Pinky_C_JNT_END
+      parentName: Aidan_Maya_File:R_Pinky_C_JNT
+      position: {x: 0.012630216, y: -0.00006334314, z: 0.0003221174}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Index_A_JNT
+      parentName: Aidan_Maya_File:R_Wrist_JNT
+      position: {x: 0.11807139, y: 0.01109768, z: -0.028047614}
+      rotation: {x: -0.034842756, y: -0.016138123, z: 0.080027506, w: 0.9960528}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Index_B_JNT
+      parentName: Aidan_Maya_File:R_Index_A_JNT
+      position: {x: 0.042086344, y: -0.0001944933, z: 0.00004622876}
+      rotation: {x: 0.008073586, y: -0.0018919322, z: 0.060221218, w: 0.99815065}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Index_C_JNT
+      parentName: Aidan_Maya_File:R_Index_B_JNT
+      position: {x: 0.02748885, y: -0.0014523946, z: 0.000043855733}
+      rotation: {x: 0.0041780337, y: -0.004913909, z: 0.012910545, w: 0.9998959}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Index_C_JNT_END
+      parentName: Aidan_Maya_File:R_Index_C_JNT
+      position: {x: 0.0153495185, y: -0.0000030101285, z: -0.0000018413128}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Thumb_A_JNT
+      parentName: Aidan_Maya_File:R_Wrist_JNT
+      position: {x: 0.07549641, y: 0.019563751, z: -0.044654217}
+      rotation: {x: 0.3971924, y: 0.3708902, z: -0.08952912, w: 0.83466357}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Thumb_B_JNT
+      parentName: Aidan_Maya_File:R_Thumb_A_JNT
+      position: {x: 0.02820636, y: 0.0017773655, z: 0.000109609915}
+      rotation: {x: 0.0052965265, y: -0.011261996, z: 0.022932865, w: 0.9996596}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Thumb_C_JNT
+      parentName: Aidan_Maya_File:R_Thumb_B_JNT
+      position: {x: 0.03379143, y: -0.0019730607, z: 0.00015181859}
+      rotation: {x: 0.005384683, y: -0.006589257, z: -0.06943649, w: 0.99755013}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Thumb_C_JNT_END
+      parentName: Aidan_Maya_File:R_Thumb_C_JNT
+      position: {x: 0.014625227, y: -0.000000054124165, z: 0.00000026503676}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:Pelvis_JNT
+      parentName: Aidan_Maya_File:Hip_JNT
+      position: {x: 0.09002825, y: 0, z: -0.00411352}
+      rotation: {x: -0.018049197, y: -0.018049197, z: 0.7068764, w: 0.7068764}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Thigh_JNT
+      parentName: Aidan_Maya_File:Pelvis_JNT
+      position: {x: -0.09375835, y: 0.047953565, z: 0.0049307505}
+      rotation: {x: 0.12546165, y: 0.055679936, z: 0.6319804, w: 0.76273185}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Knee_JNT
+      parentName: Aidan_Maya_File:L_Thigh_JNT
+      position: {x: -0.4532431, y: 0.0006926744, z: 0.03503315}
+      rotation: {x: 0.0024491795, y: -0.014028601, z: 0.027081097, w: 0.9995318}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Ankle_JNT
+      parentName: Aidan_Maya_File:L_Knee_JNT
+      position: {x: -0.39516947, y: -0.00036062405, z: -0.03385987}
+      rotation: {x: -0.07541825, y: -0.00886246, z: 0.045867484, w: 0.9960571}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Option_LEG_IK_FK_GRP
+      parentName: Aidan_Maya_File:L_Ankle_JNT
+      position: {x: -0.028225457, y: -0.003960469, z: -0.084221415}
+      rotation: {x: -0.071365975, y: 0.0590063, z: -0.68725896, w: 0.72048616}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Option_LEG_IK_FK
+      parentName: Aidan_Maya_File:L_Option_LEG_IK_FK_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Ankle_JNT_END
+      parentName: Aidan_Maya_File:L_Ankle_JNT
+      position: {x: -0.1474116, y: 9.664835e-18, z: 1.7375686e-17}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Ball_JNT
+      parentName: Aidan_Maya_File:L_Ankle_JNT
+      position: {x: -0.077402994, y: 0.05233517, z: 0.12469849}
+      rotation: {x: 0.42057005, y: 0.3892174, z: -0.49156895, w: 0.6557367}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:L_Foot_JNT_END
+      parentName: Aidan_Maya_File:L_Ball_JNT
+      position: {x: -0.10737751, y: -5.067566e-17, z: -2.7699286e-17}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Thigh_JNT
+      parentName: Aidan_Maya_File:Pelvis_JNT
+      position: {x: 0.0937584, y: 0.04795358, z: 0.0049307845}
+      rotation: {x: 0.7627316, y: -0.63198036, z: 0.055681337, w: -0.12546323}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Knee_JNT
+      parentName: Aidan_Maya_File:R_Thigh_JNT
+      position: {x: 0.45324305, y: -0.00069306605, z: -0.035033077}
+      rotation: {x: 0.0024491795, y: -0.014028601, z: 0.027081097, w: 0.9995318}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Ankle_JNT
+      parentName: Aidan_Maya_File:R_Knee_JNT
+      position: {x: 0.3951691, y: 0.0003611967, z: 0.033859845}
+      rotation: {x: -0.07542112, y: -0.008862375, z: 0.04586775, w: 0.99605685}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Option_LEG_IK_FK_GRP
+      parentName: Aidan_Maya_File:R_Ankle_JNT
+      position: {x: 0.028225869, y: 0.0039602877, z: 0.08422138}
+      rotation: {x: 0.72048616, y: -0.68725896, z: -0.0590063, w: 0.071365975}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Option_LEG_IK_FK
+      parentName: Aidan_Maya_File:R_Option_LEG_IK_FK_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Ankle_JNT_END
+      parentName: Aidan_Maya_File:R_Ankle_JNT
+      position: {x: 0.14741197, y: -0.0000002159791, z: -0.00000031858107}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Ball_JNT
+      parentName: Aidan_Maya_File:R_Ankle_JNT
+      position: {x: 0.077403374, y: -0.052334957, z: -0.12469857}
+      rotation: {x: 0.42057005, y: 0.3892174, z: -0.49156895, w: 0.6557367}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aidan_Maya_File:R_Foot_JNT_END
+      parentName: Aidan_Maya_File:R_Ball_JNT
+      position: {x: 0.10737754, y: 0.0000000010083648, z: 0.0000005699191}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f23393e26068f2248a6636399cb44aca, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
