@@ -41,12 +41,6 @@ public class MovePlayer : MonoBehaviour
 		StartRotation = transform.rotation.eulerAngles.z;
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		
-		
-	}
 	private void FixedUpdate()
 	{
 		Look();
@@ -84,7 +78,8 @@ public class MovePlayer : MonoBehaviour
 
 		currentLook = Vector2.SmoothDamp(currentLook, targetLook, ref smoothLookVelocity, smoothTime);
 
-		rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, currentLook.x, 0f));
+		Quaternion deltaRotation = Quaternion.Euler(0f, currentLook.x, 0f);
+		rb.MoveRotation(rb.rotation * deltaRotation);
 
 		pitch -= currentLook.y;
 		pitch = Mathf.Clamp(pitch, -verticalClamp, verticalClamp);
