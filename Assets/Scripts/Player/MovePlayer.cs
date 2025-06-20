@@ -44,11 +44,12 @@ public class MovePlayer : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		Look();
+		
 		
 	}
 	private void FixedUpdate()
 	{
+		Look();
 		Move();
 	}
 	private void Move()
@@ -83,7 +84,7 @@ public class MovePlayer : MonoBehaviour
 
 		currentLook = Vector2.SmoothDamp(currentLook, targetLook, ref smoothLookVelocity, smoothTime);
 
-		transform.Rotate(currentLook.x * Vector3.up);
+		rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, currentLook.x, 0f));
 
 		pitch -= currentLook.y;
 		pitch = Mathf.Clamp(pitch, -verticalClamp, verticalClamp);
