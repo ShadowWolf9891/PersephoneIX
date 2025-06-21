@@ -60,7 +60,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             bb.Set<bool>("CanSeePlayer", true);
             alertedToPlayer = true;
-            Debug.Log("Enemy can see the player.");
+            //Debug.Log("Enemy can see the player.");
         }
         else if (!CanSeeTarget(player) && alertedToPlayer)
         {
