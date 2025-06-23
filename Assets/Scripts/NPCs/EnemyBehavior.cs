@@ -26,8 +26,6 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject player;
 	private float rotationSpeed = 0.05f;
 
-	private int currentPatrolPoint = 0;
-
 	List<Vector3> searchPoints = new();
 	private bool alertedToPlayer = false;
 	private float waitTimer;
@@ -94,12 +92,12 @@ public class EnemyBehavior : MonoBehaviour
     public void MoveToPlayer()
     {
         agent.SetDestination(player.transform.position);
-        RotateToFacePlayer();
+        //RotateToFacePlayer();
 	}
 
 	void RotateToFacePlayer()
 	{
-		agent.updateRotation = false; //Manually update rotation
+		//agent.updateRotation = false; //Manually update rotation
 		//Vector3 direction = (player.transform.position - transform.position).normalized;
 		//direction.y = 0f;
 

@@ -5,12 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     InputManager inputManager;
+    ObjectiveManager objectiveManager;
 
     [SerializeField] private GameEvent testEvent;
 
 	void Awake()
 	{
         inputManager = GetComponent<InputManager>();
+        objectiveManager = GetComponent<ObjectiveManager>();
 		Cursor.lockState = CursorLockMode.Locked;
 		DontDestroyOnLoad(gameObject);
 	}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
 
-public class damageGun : MonoBehaviour
+public class DamageGun : MonoBehaviour
 {
     public float damage;
     public float bulletRange;
