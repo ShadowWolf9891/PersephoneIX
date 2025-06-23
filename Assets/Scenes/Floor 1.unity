@@ -29668,6 +29668,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1218194827}
+  - {fileID: 1799589889}
   - {fileID: 652801231}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -71871,7 +71872,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 758032586}
     m_Modifications:
     - target: {fileID: 993558499942450664, guid: a50fa82a1a421154aa5ff70e006c58d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71919,13 +71920,18 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 07bb12a31a27b1c47b37a8f3ff396f78, type: 2}
     - target: {fileID: 8878933242194430757, guid: a50fa82a1a421154aa5ff70e006c58d2, type: 3}
       propertyPath: m_Name
-      value: ObjectiveTrigger
+      value: FindCrewTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a50fa82a1a421154aa5ff70e006c58d2, type: 3}
+--- !u!4 &1799589889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 993558499942450664, guid: a50fa82a1a421154aa5ff70e006c58d2, type: 3}
+  m_PrefabInstance: {fileID: 1799589888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1799855618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86708,4 +86714,3 @@ SceneRoots:
   - {fileID: 1624621600}
   - {fileID: 1647369802}
   - {fileID: 677522027}
-  - {fileID: 1799589888}
