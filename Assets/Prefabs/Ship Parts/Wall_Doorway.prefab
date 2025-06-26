@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7185503578539292056}
   - component: {fileID: 7469001324633459484}
   - component: {fileID: 2722471076990703336}
-  - component: {fileID: 2449839754885143679}
   - component: {fileID: 8077102980936582522}
   - component: {fileID: 4400295018706587868}
+  - component: {fileID: 2449839754885143679}
+  - component: {fileID: 8560159497383405089}
   m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
@@ -86,25 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2449839754885143679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347428921892024792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed0915948fb48af44890c1a314fcbb7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocked: 0
-  interactAction: {fileID: -4246677518890513471, guid: 25ab83913fa28e64c911dbbd3828e5fe, type: 3}
-  attachedLights:
-  - {fileID: 559550567244638169}
-  - {fileID: 2076177395361688430}
-  LockedLightMaterial: {fileID: 2100000, guid: 52f5614192d31884798e42be8ed4297a, type: 2}
-  UnlockedLightMaterial: {fileID: 2100000, guid: 27571cdf3bab59d43980d9525ed055f6, type: 2}
 --- !u!65 &8077102980936582522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142,6 +124,53 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &2449839754885143679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347428921892024792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0915948fb48af44890c1a314fcbb7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  interactAction: {fileID: -4246677518890513471, guid: 25ab83913fa28e64c911dbbd3828e5fe, type: 3}
+  attachedLights:
+  - {fileID: 559550567244638169}
+  - {fileID: 2076177395361688430}
+  LockedLightMaterial: {fileID: 2100000, guid: 52f5614192d31884798e42be8ed4297a, type: 2}
+  UnlockedLightMaterial: {fileID: 2100000, guid: 27571cdf3bab59d43980d9525ed055f6, type: 2}
+--- !u!114 &8560159497383405089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347428921892024792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8096a04b74f0224b92d3ac87844725e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 7627859c5667dd14ba32b685b8da50b2, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2449839754885143679}
+        m_TargetAssemblyTypeName: DoorBehavior, Assembly-CSharp
+        m_MethodName: UnlockDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4154018734177785456
 GameObject:
   m_ObjectHideFlags: 0

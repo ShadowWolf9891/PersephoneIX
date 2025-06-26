@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 54610353654221055}
   - component: {fileID: 4440234718015683124}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,9 +255,10 @@ GameObject:
   - component: {fileID: 9068844375870110801}
   - component: {fileID: 1769887985925841699}
   - component: {fileID: 5775550039396840840}
-  - component: {fileID: 5181483964508436883}
+  - component: {fileID: 1066176956577304956}
+  - component: {fileID: 2813060496390283345}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: ConsoleWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +329,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5181483964508436883
+--- !u!65 &1066176956577304956
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,8 +348,23 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.99999994, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2813060496390283345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840245037115658926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4541667fd3aad439d5cecec62cf9bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAction: {fileID: -4246677518890513471, guid: 25ab83913fa28e64c911dbbd3828e5fe, type: 3}
+  eventToTrigger: {fileID: 11400000, guid: 7627859c5667dd14ba32b685b8da50b2, type: 2}
+  DoorToUnlock: {fileID: 0}
 --- !u!1 &5793947814848372005
 GameObject:
   m_ObjectHideFlags: 0

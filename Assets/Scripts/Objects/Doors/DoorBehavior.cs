@@ -79,7 +79,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
 		doorObstacle.carving = true;
 	}
 
-	private void UnlockDoor()
+	public void UnlockDoor()
 	{
 		if(isLocked) 
 		{
@@ -91,7 +91,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
 			}
 		}
 	}
-	private void LockDoor()
+	public void LockDoor()
 	{
 		if (!isLocked)
 		{

@@ -8,7 +8,7 @@ public class InteractWithObject : MonoBehaviour
 {
 
     IInteractable currentInteractable;
-
+	[SerializeField] Transform CameraRoot;
 	[SerializeField] float interactRange = 2f;
 	[SerializeField] LayerMask interactableLayer;
 	[SerializeField] TextMeshProUGUI interactionUI;
@@ -25,7 +25,8 @@ public class InteractWithObject : MonoBehaviour
     /// <exception cref="NotImplementedException"></exception>
 	private void CheckForInteractable()
 	{
-		Ray ray = new Ray(transform.position + Vector3.up, transform.forward); // Adjust origin as needed
+		Ray ray = new Ray(CameraRoot.transform.position, transform.forward); // Adjust origin as needed
+		//Debug.DrawRay(ray.origin, ray.direction);
 		if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))
 		{
 			if (hit.collider.gameObject.TryGetComponent<IInteractable>(out var interactable))
