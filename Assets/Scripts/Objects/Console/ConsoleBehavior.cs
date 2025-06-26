@@ -8,9 +8,17 @@ public class ConsoleBehavior : MonoBehaviour, IInteractable
 	[SerializeField] InputActionReference interactAction;
 	[SerializeField] GameObjectEventTrigger eventToTrigger;
 	[SerializeField] GameObject DoorToUnlock;
+	[SerializeField] bool OneTime = true;
+
+	bool doneAction = false;
 	public string GetInteractionPrompt()
 	{
-		return $"Press {interactAction.action.GetBindingDisplayString()}";
+		if (doneAction && OneTime) return "";
+
+		if(DoorToUnlock != null && eventToTrigger != null) { return $"Press {interactAction.action.GetBindingDisplayString()}";}
+
+		return "";
+		
 	}
 
 	public bool IsHoldInteraction()
@@ -20,9 +28,12 @@ public class ConsoleBehavior : MonoBehaviour, IInteractable
 
 	public void OnInteractStart()
 	{
+		if(doneAction && OneTime) return;
+
 		if (DoorToUnlock != null)
 		{
 			eventToTrigger.Raise(DoorToUnlock);
+			doneAction = true;
 		}
 		
 	}

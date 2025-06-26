@@ -2375,6 +2375,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7652327936540142646, guid: 643b957f41079f64d8b2a89e839a443b, type: 3}
   m_PrefabInstance: {fileID: 45554614}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &45820572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1347428921892024792, guid: 50de1f30be66ddf4facfd97c2a666342, type: 3}
+  m_PrefabInstance: {fileID: 1331682767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &46925467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20681,10 +20686,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 727483946}
     m_Modifications:
+    - target: {fileID: 2813060496390283345, guid: 523760a552987874fb1ab05269497061, type: 3}
+      propertyPath: DoorToUnlock
+      value: 
+      objectReference: {fileID: 45820572}
     - target: {fileID: 5793947814848372005, guid: 523760a552987874fb1ab05269497061, type: 3}
       propertyPath: m_Name
       value: ControlPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6487779054516531617, guid: 523760a552987874fb1ab05269497061, type: 3}
+      propertyPath: DoorToUnlock
+      value: 
+      objectReference: {fileID: 45820572}
     - target: {fileID: 7628303780123220881, guid: 523760a552987874fb1ab05269497061, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.83313
@@ -20725,7 +20738,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6487779054516531617, guid: 523760a552987874fb1ab05269497061, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -53705,6 +53719,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1955088790}
     m_Modifications:
+    - target: {fileID: 2449839754885143679, guid: 50de1f30be66ddf4facfd97c2a666342, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7214550400280526690, guid: 50de1f30be66ddf4facfd97c2a666342, type: 3}
       propertyPath: m_Name
       value: Wall_Doorway
@@ -70736,6 +70754,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1955088790}
     m_Modifications:
+    - target: {fileID: 2449839754885143679, guid: 50de1f30be66ddf4facfd97c2a666342, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7214550400280526690, guid: 50de1f30be66ddf4facfd97c2a666342, type: 3}
       propertyPath: m_Name
       value: Wall_Doorway (2)
