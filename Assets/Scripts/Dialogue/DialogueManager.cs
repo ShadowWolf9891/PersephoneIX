@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour, IGameEventListener<DialogueTrigger
 
 	public void OnEventRaised(DialogueTriggerData data)
 	{
-		Debug.Log("Event Raised");
+		Debug.Log("Dialogue Event Raised");
 		StartDialogue(data.dialogue);
 	}
 

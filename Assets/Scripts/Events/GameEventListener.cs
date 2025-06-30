@@ -16,8 +16,3 @@ public abstract class GameEventListener<T> : MonoBehaviour, IGameEventListener<T
 
 	public virtual void OnEventRaised(T value) => response.Invoke(value);
 }
-
-public class GameEventListener : GameEventListener<Unit>
-{
-	// Uses UnityEvent with no parameters — works out of the box in Inspector
-}

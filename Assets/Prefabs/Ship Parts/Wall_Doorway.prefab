@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8077102980936582522}
   - component: {fileID: 4400295018706587868}
   - component: {fileID: 2449839754885143679}
-  - component: {fileID: 8560159497383405089}
+  - component: {fileID: 6373286659636462924}
   m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
@@ -143,7 +143,7 @@ MonoBehaviour:
   - {fileID: 2076177395361688430}
   LockedLightMaterial: {fileID: 2100000, guid: 52f5614192d31884798e42be8ed4297a, type: 2}
   UnlockedLightMaterial: {fileID: 2100000, guid: 27571cdf3bab59d43980d9525ed055f6, type: 2}
---- !u!114 &8560159497383405089
+--- !u!114 &6373286659636462924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347428921892024792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8096a04b74f0224b92d3ac87844725e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a27ef3ce8fe948448ae6adf038177b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 7627859c5667dd14ba32b685b8da50b2, type: 2}

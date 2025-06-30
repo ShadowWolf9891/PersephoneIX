@@ -10,6 +10,11 @@ using UnityEngine;
 ///		Hook up any function to response - e.g. OpenDoor(), PlayAlarm().
 /// 4. Trigger the event from any script using yourGameEventName.Raise()
 /// 
+/// For new events that pass in data:
+/// 1. Create a new class [YourClassName] : GameEvent[YourDataType]
+/// 2. In the editor run Tool > Generate Game Event Classes. This will create scripts that can be attached to gameobjects.
+/// 3. Add Component > Events > Triggers and Add Component > Events > Listeners to game objects and follow above steps 1 - 4.
+/// 
 /// </summary>
 
 public abstract class GameEvent<T> : ScriptableObject
@@ -22,6 +27,8 @@ public abstract class GameEvent<T> : ScriptableObject
 	/// <param name="value"></param>
     public void Raise(T value)
     {
+		EventHistory.Instance.MarkRaised(this);
+		Debug.Log($"Raised event with type {GetType()}");
 		for (int i = listeners.Count - 1; i >= 0; i--)
 		{
 			listeners[i].OnEventRaised(value);

@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 9159391433045019580}
   - component: {fileID: 4178135597005989990}
   - component: {fileID: 5223349437797910651}
-  - component: {fileID: 4754740988253964596}
+  - component: {fileID: 7964855209856046779}
   m_Layer: 8
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4754740988253964596
+--- !u!114 &7964855209856046779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1476918964960031690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e49d987abe3a548a777ae0c0dffada, type: 3}
+  m_Script: {fileID: 11500000, guid: e94278ccfe0ef3547963d102f93e2693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 39a37034a209a8f4cbf247c944bec0b7, type: 2}
@@ -629,7 +629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1569280825868470771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1039,8 +1039,8 @@ GameObject:
   - component: {fileID: 2712587085919539902}
   - component: {fileID: 4239853182698635452}
   - component: {fileID: 8417389065847661979}
+  - component: {fileID: 5954727564114679501}
   - component: {fileID: 4860569341826933074}
-  - component: {fileID: 6347686364882587453}
   - component: {fileID: 8713674680295821952}
   - component: {fileID: 2725243549298288216}
   m_Layer: 8
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6011136229585371662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b82c1f2f08a1e0643b69d33162319f4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c8b447f6d62ff34581fdc939d80942e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 1555f54446c28854cb7103c55ef0671f, type: 2}
@@ -1261,6 +1261,46 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: OnEventRaised
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5954727564114679501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011136229585371662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94278ccfe0ef3547963d102f93e2693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 39a37034a209a8f4cbf247c944bec0b7, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4239853182698635452}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: WaitForPlayerInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4860569341826933074}
+        m_TargetAssemblyTypeName: InteractWithObject, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1287,34 +1327,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 129
   interactionUI: {fileID: 2255170096142377998}
---- !u!114 &6347686364882587453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6011136229585371662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e49d987abe3a548a777ae0c0dffada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 39a37034a209a8f4cbf247c944bec0b7, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4860569341826933074}
-        m_TargetAssemblyTypeName: InteractWithObject, Assembly-CSharp
-        m_MethodName: OnInteract
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8713674680295821952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,7 +1351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6011136229585371662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa23f530951806949ad7e927bdd8e49f, type: 3}
+  m_Script: {fileID: 11500000, guid: 77807f98d7694c843a4dca4f956d7602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 54895b1ce5d98be44aad2ef1a934eea1, type: 2}
