@@ -1,9 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+
 
 namespace EasyBehaviorTree
 {
@@ -31,12 +30,14 @@ namespace EasyBehaviorTree
 
 		public Vector2 Center => new Vector2(Rect.x + Rect.width / 2, Rect.y + Rect.height / 2);
 
+#if UNITY_EDITOR
 		public void Draw(Vector2 viewOffset)
 		{
 			if (tex == null) return;
 			var adjustedRect = new Rect(Rect.position + viewOffset, Rect.size);
 			GUI.DrawTexture(adjustedRect, tex, ScaleMode.ScaleToFit);
 		}
+#endif
 
 		public bool Contains(Vector2 point) => Rect.Contains(point);
 

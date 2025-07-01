@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 namespace EasyBehaviorTree
 {
 	public class BlackboardEditor : EditorWindow
@@ -76,3 +76,4 @@ namespace EasyBehaviorTree
 		}
 	}
 }
+#endif

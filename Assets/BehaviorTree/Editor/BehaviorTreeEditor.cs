@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 
 namespace EasyBehaviorTree
 {
@@ -236,7 +236,7 @@ namespace EasyBehaviorTree
 			}
 
 			//Left Click Graph area
-			if (e.type == EventType.MouseDown && GraphArea.Contains(e.mousePosition) && e.button == (int)MouseButton.Left)
+			if (e.type == EventType.MouseDown && GraphArea.Contains(e.mousePosition) && e.button == 0)
 			{
 				if (ClickedOnNode(e.mousePosition, out BTNode clickedNode))//Left click on node
 				{
@@ -267,7 +267,7 @@ namespace EasyBehaviorTree
 				}
 			}
 			//Release Left mouse button and were moving a node
-			if (e.type == EventType.MouseUp && movingNode && e.button == (int)MouseButton.Left)
+			if (e.type == EventType.MouseUp && movingNode && e.button == 0)
 			{
 				//Stop moving the node and reload the tree
 				movingNode = false;
@@ -276,7 +276,7 @@ namespace EasyBehaviorTree
 				e.Use();
 			}
 			//Holding down left mouse and moving a node
-			if (movingNode && e.type == EventType.MouseDrag && e.button == (int)MouseButton.Left)
+			if (movingNode && e.type == EventType.MouseDrag && e.button == 0)
 			{
 				//Move the position of the node
 				selectedNode.Move(e.mousePosition + curOffset);
@@ -293,7 +293,7 @@ namespace EasyBehaviorTree
 				GUI.changed = true;
 			}
 			//Release the left mouse button while drawing a connection
-			if (e.type == EventType.MouseUp && drawingConnection && e.button == (int)MouseButton.Left)
+			if (e.type == EventType.MouseUp && drawingConnection && e.button == 0)
 			{
 				drawingConnection = false; //Stop drawing the connection
 
@@ -522,3 +522,4 @@ namespace EasyBehaviorTree
 
 	}
 }
+#endif

@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace EasyBehaviorTree
@@ -17,6 +18,7 @@ namespace EasyBehaviorTree
 		public BTNode rootNode;
 		public List<BTNode> nodes = new();
 
+#if UNITY_EDITOR
 		public void AddNode(BTNode node)
 		{
 			nodes.Add(node);
@@ -34,7 +36,7 @@ namespace EasyBehaviorTree
 			AssetDatabase.RemoveObjectFromAsset(node);
 			AssetDatabase.SaveAssets();
 		}
-
+#endif
 		/// <summary>
 		/// Send a tick down the chain of the behavior tree.
 		/// </summary>

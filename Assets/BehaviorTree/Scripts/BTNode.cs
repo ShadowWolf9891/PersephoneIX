@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace EasyBehaviorTree
@@ -66,6 +64,8 @@ namespace EasyBehaviorTree
 		/// <returns></returns>
 		protected abstract NodeState Execute(GameObject context);
 
+
+#if UNITY_EDITOR
 		/// <summary>
 		/// Draw the node and change it's colour depending on what state it is in.
 		/// </summary>
@@ -116,6 +116,7 @@ namespace EasyBehaviorTree
 				GUI.Box(indexRect, GetIndex().ToString());
 			}
 		}
+#endif
 		/// <summary>
 		/// Set this node and all child nodes back to IDLE status.
 		/// </summary>
