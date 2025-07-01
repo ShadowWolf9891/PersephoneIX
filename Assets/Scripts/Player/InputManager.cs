@@ -15,6 +15,8 @@ public class InputManager : MonoBehaviour
 	PlayerInput pInput;
 	MovePlayer _MovePlayer;
 	[SerializeField]GameEvent playerInteract;
+	[SerializeField] GameEvent openMenu;
+	[SerializeField] GameEvent openInventory;
 
 	public static InputManager Instance { get; private set; }
 
@@ -67,6 +69,28 @@ public class InputManager : MonoBehaviour
 		if (context.started)
 		{
 			playerInteract.Raise();
+		}
+	}
+	/// <summary>
+	/// Occurs when the player presses the interact key. (Currently 'E')
+	/// </summary>
+	/// <param name="context"></param>
+	public void OpenMenuPressed(CallbackContext context)
+	{
+		if (context.started)
+		{
+			openMenu.Raise();
+		}
+	}
+	/// <summary>
+	/// Occurs when the player presses the interact key. (Currently 'E')
+	/// </summary>
+	/// <param name="context"></param>
+	public void OpenInventoryPressed(CallbackContext context)
+	{
+		if (context.started)
+		{
+			openInventory.Raise();
 		}
 	}
 }

@@ -15,3 +15,5 @@ MonoBehaviour:
   itemName: Test Item - Cube
   icon: {fileID: 0}
   description: 
+  isStackable: 1
+  MaxStack: 10

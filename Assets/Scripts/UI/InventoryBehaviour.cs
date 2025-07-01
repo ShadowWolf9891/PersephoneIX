@@ -18,7 +18,7 @@ public class InventoryBehaviour : MonoBehaviour, IInteractable
     }
     public void OnInteractStart() //When the button is first held down
     {
-        InventoryManager.instance.Add(itemData);
+        //InventoryManager.instance.Add(itemData);
         Destroy(gameObject);
     }
     public void OnInteractStop()

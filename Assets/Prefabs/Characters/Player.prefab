@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 1689250049835909786}
   - component: {fileID: 8713674680295821952}
   - component: {fileID: 2725243549298288216}
+  - component: {fileID: 2624129174672837234}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1191,6 +1192,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: bf8ab00b-88d9-4295-8619-488173a91946
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a8852ce-985f-461b-8ffa-30b35dc9591a
+    m_ActionName: Player/OpenMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f850f03-2e96-45d9-8823-24d4d9342d66
+    m_ActionName: Player/OpenInventory[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1227,6 +1236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInteract: {fileID: 11400000, guid: 39a37034a209a8f4cbf247c944bec0b7, type: 2}
+  openMenu: {fileID: 0}
+  openInventory: {fileID: 0}
 --- !u!114 &4239853182698635452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,6 +1369,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2624129174672837234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011136229585371662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7e933fcb96caf46aae39f48ba9c75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 9
+  height: 6
+  slots: []
 --- !u!1001 &1517192986169610978
 PrefabInstance:
   m_ObjectHideFlags: 0
