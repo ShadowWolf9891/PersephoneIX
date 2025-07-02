@@ -22,10 +22,9 @@ public class InteractWithObject : MonoBehaviour
     /// <summary>
     /// Raycast for prompt before interacting
     /// </summary>
-    /// <exception cref="NotImplementedException"></exception>
 	private void CheckForInteractable()
 	{
-		Ray ray = new Ray(CameraRoot.transform.position, transform.forward); // Adjust origin as needed
+		Ray ray = new Ray(CameraRoot.transform.position, CameraRoot.transform.forward); // Adjust origin as needed
 		//Debug.DrawRay(ray.origin, ray.direction);
 		if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))
 		{

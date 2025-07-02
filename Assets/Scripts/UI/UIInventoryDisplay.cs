@@ -25,4 +25,19 @@ public class UIInventoryDisplay : MonoBehaviour
 			slotUI.Setup(slot);
 		}
 	}
+
+	public void ToggleInventory()
+	{
+		if(gridParent.parent.gameObject.activeInHierarchy)
+		{
+			gridParent.parent.gameObject.SetActive(false);
+		}
+		else
+		{
+			gridParent.parent.gameObject.SetActive(true);
+			Refresh();
+		}
+		
+		
+	}
 }

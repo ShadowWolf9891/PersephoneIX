@@ -3,7 +3,10 @@ guid: 6c7f308af748d6043b679a53f05b5f35
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerInteract: {fileID: 11400000, guid: 39a37034a209a8f4cbf247c944bec0b7, type: 2}
+  - openMenu: {fileID: 11400000, guid: 5a87be6bd9cf20c4a9129448eb5cad26, type: 2}
+  - openInventory: {fileID: 11400000, guid: 3a6a093b8987225418ef274507639a20, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
