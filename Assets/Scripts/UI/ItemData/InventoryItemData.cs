@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Inventory/Item")]
 public class InventoryItemData : ScriptableObject
 {
-    //**set up for visual UI but not implemented
     public string itemName;
     public Sprite icon;
     [TextArea] public string description;

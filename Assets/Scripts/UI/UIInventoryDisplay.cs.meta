@@ -7,6 +7,10 @@ MonoImporter:
   - inventory: {instanceID: 0}
   - itemSlotPrefab: {fileID: 6029713165688925855, guid: 3a111e0956638f04fb9c5a54828eb4c5, type: 3}
   - gridParent: {instanceID: 0}
+  - toggleMovementEvent: {fileID: 11400000, guid: 90898752f3ef2eb40a78a45e6462625d, type: 2}
+  - nameBox: {instanceID: 0}
+  - descriptionBox: {instanceID: 0}
+  - imageBox: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -30,6 +30,7 @@ public class MovePlayer : MonoBehaviour
 	public float smoothTime = 0.05f; // lower = snappier, higher = smoother
 
 	bool InZeroG = false;
+	bool canMoveAndLook = true;
 
 
 	// Start is called before the first frame update
@@ -43,8 +44,12 @@ public class MovePlayer : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Look();
-		Move();
+		if (canMoveAndLook)
+		{
+			Look();
+			Move();
+		}
+		
 	}
 	private void Move()
 	{
@@ -102,5 +107,10 @@ public class MovePlayer : MonoBehaviour
 	{
 		GUILayout.Label("Move: " + InputVector);
 		GUILayout.Label("Look: " + LookVector);
+	}
+
+	public void ToggleMovement()
+	{
+		canMoveAndLook = !canMoveAndLook;
 	}
 }
