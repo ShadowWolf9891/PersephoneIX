@@ -142,8 +142,6 @@ GameObject:
   - component: {fileID: 4860569341826933074}
   - component: {fileID: 1689250049835909786}
   - component: {fileID: 825343983058354766}
-  - component: {fileID: 8713674680295821952}
-  - component: {fileID: 2725243549298288216}
   - component: {fileID: 2624129174672837234}
   m_Layer: 8
   m_Name: Player
@@ -324,6 +322,34 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8f850f03-2e96-45d9-8823-24d4d9342d66
     m_ActionName: Player/OpenInventory[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 512ea81d-1b3e-4cf2-96cf-9bc02ed0a5f3
+    m_ActionName: Player/UI_Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 64756d3f-481b-48b4-ae6e-17fa83c18032
+    m_ActionName: Player/UI_LeftClick[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b9f61b12-fa69-49f7-80f4-47f6993cbb80
+    m_ActionName: Player/UI_RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1c44878b-5fc5-40b3-92fa-2a1965535993
+    m_ActionName: Player/UI_ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a9fe0d9a-9471-477a-bd89-a111dea9f994
+    m_ActionName: Player/UI_Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7c331bc5-0146-4bb3-abba-042b844ec502
+    m_ActionName: Player/UI_Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7d1cdeb0-7c84-4378-871f-c350250996a4
+    m_ActionName: Player/UI_Navigate[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -428,49 +454,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MovePlayer, Assembly-CSharp
         m_MethodName: ToggleMovement
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8713674680295821952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6011136229585371662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87800b4ef6ec6454ca4d95b0592c9750, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectiveText: {fileID: 0}
-  objectivePanel: {fileID: 0}
-  newObjectivePanel: {fileID: 0}
---- !u!114 &2725243549298288216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6011136229585371662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77807f98d7694c843a4dca4f956d7602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 54895b1ce5d98be44aad2ef1a934eea1, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8713674680295821952}
-        m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
-        m_MethodName: OnEventRaised
-        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
