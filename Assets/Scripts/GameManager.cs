@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -27,5 +30,18 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public void PauseUnPauseGame()
+    {
+        Time.timeScale = Time.timeScale == 1.0f ? 0f : 1.0f;
+	}
+
+    public void QuitGame()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#endif
     }
 }

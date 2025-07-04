@@ -72,7 +72,7 @@ public class InputManager : MonoBehaviour
 		}
 	}
 	/// <summary>
-	/// Occurs when the player presses the interact key. (Currently 'E')
+	/// Occurs when the player presses the menu key. (Currently 'Esc')
 	/// </summary>
 	/// <param name="context"></param>
 	public void OpenMenuPressed(CallbackContext context)
@@ -83,7 +83,7 @@ public class InputManager : MonoBehaviour
 		}
 	}
 	/// <summary>
-	/// Occurs when the player presses the interact key. (Currently 'E')
+	/// Occurs when the player presses the Inventory key. (Currently 'Tab')
 	/// </summary>
 	/// <param name="context"></param>
 	public void OpenInventoryPressed(CallbackContext context)

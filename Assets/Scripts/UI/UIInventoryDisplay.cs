@@ -10,6 +10,7 @@ public class UIInventoryDisplay : MonoBehaviour
 	[SerializeField] GameObject itemSlotPrefab; // prefab with UIItemSlot
 	[SerializeField] Transform gridParent; // panel with GridLayoutGroup
 	[SerializeField] GameObject PlayerHUD;
+	[SerializeField] GameObject pauseMenu;
 	
 	[SerializeField] GameEvent toggleMovementEvent;
 
@@ -37,6 +38,8 @@ public class UIInventoryDisplay : MonoBehaviour
 
 	public void ToggleInventory()
 	{
+		if (pauseMenu.activeInHierarchy) { return; } //Cannot open inventory if pause menu is open.
+
 		if(gridParent.parent.gameObject.activeInHierarchy)
 		{
 			gridParent.parent.gameObject.SetActive(false);
