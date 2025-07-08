@@ -1,7 +1,9 @@
+#if UNITY_EDITOR
 using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+
 using UnityEditor;
 using UnityEngine;
 
@@ -100,3 +102,4 @@ public class {className} : ConditionalEventTrigger<{eventTypeName}, {dataTypeNam
 ";
 	}
 }
+#endif

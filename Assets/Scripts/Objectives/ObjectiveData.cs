@@ -8,4 +8,6 @@ public class ObjectiveData : ScriptableObject
 {
 	public string IdentifierName = "DefaultName";
 	public string ObjectiveText = "DisplayText";
+
+	public List<Vector3> WaypointPositions = new List<Vector3>();
 }

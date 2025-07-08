@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdentifierName: 1_OD_FindCrew
   ObjectiveText: Find the crew
-  ActiveObjective: 0
-  Completed: 0
+  WaypointPositions:
+  - {x: 7.07, y: 1.069, z: 11.299}
+  - {x: 0.165, y: 1.069, z: 7.96}
