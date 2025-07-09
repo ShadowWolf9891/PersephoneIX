@@ -6,8 +6,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Objective/Objective Data")]
 public class ObjectiveData : ScriptableObject
 {
-	public string IdentifierName = "DefaultName";
-	public string ObjectiveText = "DisplayText";
+	public string MainIdentifierName = "DefaultName";
+	public string MainObjectiveText = "DisplayText";
 
-	public List<Vector3> WaypointPositions = new List<Vector3>();
+	public List<SubObjective> SubObjectives = new List<SubObjective>();
+}
+
+[Serializable]
+public struct SubObjective
+{ 
+	public string Name;
+	public string ObjectiveText;
+	public Vector3 WaypointPosition;
 }

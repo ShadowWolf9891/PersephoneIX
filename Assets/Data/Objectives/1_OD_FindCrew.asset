@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afa8e50dfbf9ff4e988e40184034210, type: 3}
   m_Name: 1_OD_FindCrew
   m_EditorClassIdentifier: 
-  IdentifierName: 1_OD_FindCrew
-  ObjectiveText: Find the crew
-  WaypointPositions:
-  - {x: 7.07, y: 1.069, z: 11.299}
-  - {x: 0.165, y: 1.069, z: 7.96}
+  MainIdentifierName: 1_OD_FindCrew
+  MainObjectiveText: Find the missing crew
+  SubObjectives:
+  - Name: Unlock Cryo Room C
+    ObjectiveText: Unlock Cryo Room C
+    WaypointPosition: {x: 6.995, y: 0.954, z: 11.206}
+  - Name: Look Around
+    ObjectiveText: Look Around
+    WaypointPosition: {x: -1.82, y: 0.534, z: 8.24}

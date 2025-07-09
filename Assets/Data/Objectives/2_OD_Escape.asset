@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afa8e50dfbf9ff4e988e40184034210, type: 3}
   m_Name: 2_OD_Escape
   m_EditorClassIdentifier: 
-  IdentifierName: 2_OD_Escape
-  ObjectiveText: Escape the creature!
-  ActiveObjective: 0
-  Completed: 0
+  MainIdentifierName: 2_OD_Escape
+  MainObjectiveText: Escape the creature
+  SubObjectives: []

@@ -7,6 +7,7 @@ using UnityEngine;
 public class ObjectiveManager : MonoBehaviour, IGameEventListener<ObjectiveData>
 {
 	[SerializeField] TextMeshProUGUI objectiveText;
+	[SerializeField] TextMeshProUGUI subObjectiveText;
 	[SerializeField] GameObject objectivePanel;
 	[SerializeField] GameObject newObjectivePanel;
 	[SerializeField] GameObject waypointPrefab;
@@ -30,7 +31,7 @@ public class ObjectiveManager : MonoBehaviour, IGameEventListener<ObjectiveData>
 	private void StartObjective(ObjectiveData data)
 	{	
 		currentObjective = data;
-		objectiveText.text = data.ObjectiveText;
+		objectiveText.text = data.MainObjectiveText;
 		newObjectivePanel.SetActive(true);
 		objectivePanel.SetActive(true);
 		SpawnWaypoints(data);
@@ -44,9 +45,9 @@ public class ObjectiveManager : MonoBehaviour, IGameEventListener<ObjectiveData>
 	private void SpawnWaypoints(ObjectiveData data)
 	{
 		List<GameObject> waypoints = new List<GameObject>();
-		foreach(Vector3 pos in data.WaypointPositions)
+		foreach(SubObjective so in data.SubObjectives)
 		{
-			waypoints.Add(Instantiate(waypointPrefab, pos, Quaternion.identity));
+			waypoints.Add(Instantiate(waypointPrefab, so.WaypointPosition, Quaternion.identity));
 			Debug.Log("Spawned Waypoint");
 		}
 		waypointManager.SetWaypoints(waypoints);
