@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6b51b792d30834e9bc6743692dbc47, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
-  description: 
+  itemName: Pistol
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  description: 'A used semi-automatic pistol. '
   isStackable: 0
   MaxStack: 1
