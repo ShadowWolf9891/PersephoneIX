@@ -20,6 +20,7 @@ public class DamageGun : MonoBehaviour
         {
             if (hitinfo.collider.gameObject.TryGetComponent(out Enemy enemy))
             {
+                //if the raycast hits anywhere on the enemy it will take away 1 health
                 enemy.Health -= damage;
             }
         }

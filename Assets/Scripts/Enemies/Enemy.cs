@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+    //put on any enemy to give them starting health
+
     [SerializeField] private float startingHealth;
     private float health;
 
@@ -21,6 +23,7 @@ public class Enemy : MonoBehaviour
 
             if (health <=0f)
             {
+                //destroys the parent object so that the shot can be recognized by the script and completely gets rid of the object
                 Destroy(transform.parent.gameObject);
             }
             
