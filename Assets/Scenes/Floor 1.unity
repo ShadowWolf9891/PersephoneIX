@@ -15842,29 +15842,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7652327936540142646, guid: 3ca59574de41d9244b618c7442b960fa, type: 3}
   m_PrefabInstance: {fileID: 1248375253}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &387618369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 346618452157698019, guid: ac16a4b235cae3148958aca4d4253648, type: 3}
-  m_PrefabInstance: {fileID: 3433243461465666258}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &387618382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387618369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42acf7d7e13996448ffe6d5d585ec77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraRoot: {fileID: 5799516286572300958}
-  interactRange: 2
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  interactionUI: {fileID: 1841916092}
 --- !u!4 &387932267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7652327936540142646, guid: 643b957f41079f64d8b2a89e839a443b, type: 3}
@@ -89155,7 +89132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718376261930457518, guid: ac16a4b235cae3148958aca4d4253648, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4993865872822151790, guid: ac16a4b235cae3148958aca4d4253648, type: 3}
       propertyPath: Gun
@@ -89208,10 +89185,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 346618452157698019, guid: ac16a4b235cae3148958aca4d4253648, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 387618382}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac16a4b235cae3148958aca4d4253648, type: 3}
 --- !u!1001 &3542073918750462750
 PrefabInstance:
@@ -89488,11 +89462,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5799516286572300958 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5799516285230901726, guid: c2dab3df405bd6342b66485f587dcf2c, type: 3}
-  m_PrefabInstance: {fileID: 1887167296}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6011136228237320526 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6011136229585371662, guid: c2dab3df405bd6342b66485f587dcf2c, type: 3}
