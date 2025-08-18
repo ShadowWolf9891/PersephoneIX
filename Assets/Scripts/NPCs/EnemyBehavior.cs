@@ -106,7 +106,7 @@ public class EnemyBehavior : MonoBehaviour
 		
 	}
 
-    public void Search()
+    private void Search()
     {
 		if (!alertedToPlayer || searchPoints.Count == 0)
 			return;

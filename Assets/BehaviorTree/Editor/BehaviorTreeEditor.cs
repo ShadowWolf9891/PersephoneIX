@@ -471,8 +471,9 @@ namespace EasyBehaviorTree
 		void DrawConnection(Vector2 startPos, Vector2 endPos)
 		{
 			Handles.BeginGUI();
-			Vector2 startTangent = startPos + Vector2.right * 50f;
-			Vector2 endTangent = endPos + Vector2.left * 50f;
+			float distance = Vector2.Distance(startPos, endPos) / 3;
+			Vector2 startTangent = startPos + Vector2.up * distance;
+			Vector2 endTangent = endPos + Vector2.down * distance;
 
 			Handles.DrawBezier(
 				startPos,
