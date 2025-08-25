@@ -256,8 +256,8 @@ MonoBehaviour:
   Name: CanSeePlayer?
   NodeRect:
     serializedVersion: 2
-    x: 60
-    y: 395.20004
+    x: -10.400002
+    y: 393.60004
     width: 120
     height: 60
   Parent: {fileID: 1271792862814892140}

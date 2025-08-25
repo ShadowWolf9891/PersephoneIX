@@ -10,7 +10,7 @@ namespace EasyBehaviorTree
 	/// <summary>
 	/// Class for the behavior tree editor window. Access it from Window > Behavior Tree Editor.
 	/// </summary>
-	public class BehaviorTreeEditor : EditorWindow
+	internal class BehaviorTreeEditor : EditorWindow
 	{
 		private BehaviorTree tree;
 		private BTBlackboard bb;
@@ -341,8 +341,10 @@ namespace EasyBehaviorTree
 			GenericMenu menu = new GenericMenu();
 			menu.AddItem(new GUIContent("Add/Sequence Node"), false, () => CreateNode<BTSequence>(position));
 			menu.AddItem(new GUIContent("Add/Selector Node"), false, () => CreateNode<BTSelector>(position));
-			menu.AddItem(new GUIContent("Add/Action Node"), false, () => CreateNode<BTActionNode>(position));
 			menu.AddItem(new GUIContent("Add/Condition Node"), false, () => CreateNode<BTConditionNode>(position));
+			menu.AddItem(new GUIContent("Add/Action Node/One Time Action"), false, () => CreateNode<BTActionNode>(position));
+			menu.AddItem(new GUIContent("Add/Action Node/Continuous Action"), false, () => CreateNode<BTRunningActionNode>(position));
+			
 			menu.AddItem(new GUIContent("Add/Decorator/Inverter Node"), false, () => CreateNode<BTInverter>(position));
 			//New nodes go here...
 			//menu.AddItem(new GUIContent("Add/Example Node"), false, () => CreateNode<ExampleNode>(position));
@@ -468,12 +470,11 @@ namespace EasyBehaviorTree
 		/// </summary>
 		/// <param name="startPos"></param>
 		/// <param name="endPos"></param>
-		void DrawConnection(Vector2 startPos, Vector2 endPos)
+		private void DrawConnection(Vector2 startPos, Vector2 endPos)
 		{
 			Handles.BeginGUI();
-			float distance = Vector2.Distance(startPos, endPos) / 3;
-			Vector2 startTangent = startPos + Vector2.up * distance;
-			Vector2 endTangent = endPos + Vector2.down * distance;
+			Vector2 startTangent = startPos + Vector2.right * 50f;
+			Vector2 endTangent = endPos + Vector2.left * 50f;
 
 			Handles.DrawBezier(
 				startPos,
@@ -490,7 +491,7 @@ namespace EasyBehaviorTree
 		/// Remove a connection from <paramref name="nodePort"/>.
 		/// </summary>
 		/// <param name="nodePort"></param>
-		void RemoveConnection(NodePort nodePort)
+		private void RemoveConnection(NodePort nodePort)
 		{
 			if (nodePort == null || nodePort.ParentNode == null)
 			{

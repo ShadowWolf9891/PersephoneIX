@@ -24,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour
     private BTBlackboard bb;
     private NavMeshAgent agent;
     private GameObject player;
+	private Animator animator;
 	private float rotationSpeed = 0.05f;
 
 	List<Vector3> searchPoints = new();
@@ -41,6 +42,9 @@ public class EnemyBehavior : MonoBehaviour
         bb.Set<bool>("LostPlayer", false);
         bt.rootNode.ResetStatus();
         agent = GetComponent<NavMeshAgent>();
+		//animator = GetComponent<Animator>();
+		//animator.SetBool("CanSeePlayer", bb.Get<bool>("CanSeePlayer"));
+		//animator.SetBool("LostPlayer", bb.Get<bool>("LostPlayer"));
 		
 	}
 
@@ -49,7 +53,9 @@ public class EnemyBehavior : MonoBehaviour
     {
         bt.Tick(this.gameObject);
         CheckVision();
-    }
+		//animator.SetBool("CanSeePlayer", bb.Get<bool>("CanSeePlayer"));
+		//animator.SetBool("LostPlayer", bb.Get<bool>("LostPlayer"));
+	}
 
     void CheckVision()
     {
@@ -79,11 +85,9 @@ public class EnemyBehavior : MonoBehaviour
 				Debug.Log("No valid search points found — skipping search.");
 				EndSearch();
 			}
+			
 		}
     }
-
-	
-
 	bool CanSeeTarget(GameObject target)
     {
         return VisionUtility.CanSeeTarget(this.gameObject, target, 180f, 100, layerMask);
@@ -106,6 +110,10 @@ public class EnemyBehavior : MonoBehaviour
 		
 	}
 
+	//private void Scream()
+	//{
+		//animator.SetTrigger("Scream");
+	//}
     private void Search()
     {
 		if (!alertedToPlayer || searchPoints.Count == 0)
