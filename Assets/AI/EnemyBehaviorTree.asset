@@ -16,8 +16,8 @@ MonoBehaviour:
   Name: BTSelector
   NodeRect:
     serializedVersion: 2
-    x: 446.40002
-    y: 162.4
+    x: 447.2
+    y: 161.59999
     width: 120
     height: 60
   Parent: {fileID: 5733328352970527390}
@@ -41,8 +41,8 @@ MonoBehaviour:
   Name: MoveToPlayer
   NodeRect:
     serializedVersion: 2
-    x: 232.80002
-    y: 397.6
+    x: 241.60004
+    y: 429.6
     width: 120
     height: 60
   Parent: {fileID: 1271792862814892140}
@@ -64,8 +64,8 @@ MonoBehaviour:
   Name: LostPlayer?
   NodeRect:
     serializedVersion: 2
-    x: 397.60004
-    y: 403.2
+    x: 404.80005
+    y: 430.4
     width: 120
     height: 60
   Parent: {fileID: -213360941684576175}
@@ -118,6 +118,7 @@ MonoBehaviour:
   - {fileID: -227971811759281690}
   - {fileID: 1009197146605133216}
   - {fileID: 7187759112844814684}
+  - {fileID: 1240778915035290218}
 --- !u!114 &1009197146605133216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,13 +135,37 @@ MonoBehaviour:
   Name: Search
   NodeRect:
     serializedVersion: 2
-    x: 550.40015
-    y: 403.2
+    x: 545.60016
+    y: 432.8
     width: 120
     height: 60
   Parent: {fileID: -213360941684576175}
   Children: []
   functionName: Search
+--- !u!114 &1240778915035290218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46138ef8d556293468283bf70100c72d, type: 3}
+  m_Name: BTRunningActionNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 6071961450615529770}
+  Name: ScreamNode
+  NodeRect:
+    serializedVersion: 2
+    x: 96.80002
+    y: 431.2
+    width: 120
+    height: 60
+  Parent: {fileID: 1271792862814892140}
+  Children: []
+  functionName: StartScream
+  doUntilConditionName: doneScreaming
 --- !u!114 &1271792862814892140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +189,7 @@ MonoBehaviour:
   Parent: {fileID: -7456240690839542592}
   Children:
   - {fileID: 8654366228238602828}
+  - {fileID: 1240778915035290218}
   - {fileID: -4477885492238945907}
 --- !u!114 &5733328352970527390
 MonoBehaviour:
@@ -182,7 +208,7 @@ MonoBehaviour:
   NodeRect:
     serializedVersion: 2
     x: 442.40002
-    y: 59.99994
+    y: 59.199936
     width: 120
     height: 60
   Parent: {fileID: 0}
@@ -206,7 +232,7 @@ MonoBehaviour:
     StringValue: 
     IntValue: 0
     FloatValue: 0
-    BoolValue: 0
+    BoolValue: 1
     GameObjectValue: {fileID: 0}
     Vector3Value: {x: 0, y: 0, z: 0}
   - Key: LostPlayer
@@ -214,7 +240,7 @@ MonoBehaviour:
     StringValue: 
     IntValue: 0
     FloatValue: 0
-    BoolValue: 0
+    BoolValue: 1
     GameObjectValue: {fileID: 0}
     Vector3Value: {x: 0, y: 0, z: 0}
 --- !u!114 &7187759112844814684
@@ -233,8 +259,8 @@ MonoBehaviour:
   Name: Patrol
   NodeRect:
     serializedVersion: 2
-    x: 667.2
-    y: 272.8
+    x: 649.60004
+    y: 268.8
     width: 120
     height: 60
   Parent: {fileID: -7456240690839542592}
@@ -256,8 +282,8 @@ MonoBehaviour:
   Name: CanSeePlayer?
   NodeRect:
     serializedVersion: 2
-    x: -10.400002
-    y: 393.60004
+    x: -58.4
+    y: 431.2
     width: 120
     height: 60
   Parent: {fileID: 1271792862814892140}

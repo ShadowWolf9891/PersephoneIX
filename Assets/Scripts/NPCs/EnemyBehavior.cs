@@ -21,7 +21,12 @@ public class EnemyBehavior : MonoBehaviour
 	[SerializeField] int numberOfSearchPoints = 3;
 	[SerializeField] float timeAtEachPoint = 2f;
 
-    private BTBlackboard bb;
+	[Header("Vision Settings")]
+	[SerializeField] float visionRange = 100;
+	[SerializeField] float visionAngle = 90;
+
+
+	private BTBlackboard bb;
     private NavMeshAgent agent;
     private GameObject player;
 	private Animator animator;
@@ -29,6 +34,8 @@ public class EnemyBehavior : MonoBehaviour
 
 	List<Vector3> searchPoints = new();
 	private bool alertedToPlayer = false;
+	public bool doneScreaming = false;
+	private bool isScreaming = false;
 	private float waitTimer;
 	private int currentPointIndex;
 	private Vector3 lastKnownPlayerPosition;
@@ -42,7 +49,7 @@ public class EnemyBehavior : MonoBehaviour
         bb.Set<bool>("LostPlayer", false);
         bt.rootNode.ResetStatus();
         agent = GetComponent<NavMeshAgent>();
-		//animator = GetComponent<Animator>();
+		animator = GetComponentInChildren<Animator>();
 		//animator.SetBool("CanSeePlayer", bb.Get<bool>("CanSeePlayer"));
 		//animator.SetBool("LostPlayer", bb.Get<bool>("LostPlayer"));
 		
@@ -53,6 +60,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         bt.Tick(this.gameObject);
         CheckVision();
+		animator.SetFloat("SpeedMultiplier", agent.velocity.magnitude / agent.speed);
 		//animator.SetBool("CanSeePlayer", bb.Get<bool>("CanSeePlayer"));
 		//animator.SetBool("LostPlayer", bb.Get<bool>("LostPlayer"));
 	}
@@ -90,7 +98,7 @@ public class EnemyBehavior : MonoBehaviour
     }
 	bool CanSeeTarget(GameObject target)
     {
-        return VisionUtility.CanSeeTarget(this.gameObject, target, 180f, 100, layerMask);
+        return VisionUtility.CanSeeTarget(this.gameObject, target, visionAngle, visionRange, layerMask);
     }
 
     public void MoveToPlayer()
@@ -109,12 +117,32 @@ public class EnemyBehavior : MonoBehaviour
 		//transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.fixedDeltaTime);
 		
 	}
+	public void StartScream()
+	{
+		if (doneScreaming)
+			return;
 
-	//private void Scream()
-	//{
-		//animator.SetTrigger("Scream");
-	//}
-    private void Search()
+		if (!isScreaming)
+		{
+			isScreaming = true;
+			animator.SetTrigger("Scream");
+			agent.isStopped = true;
+		}
+
+	}
+	public void EndScream()
+	{
+		doneScreaming = true;
+		isScreaming=false;
+		agent.isStopped=false;
+	}
+
+	public void ResetScream()
+	{
+		doneScreaming=false;
+	}
+
+	private void Search()
     {
 		if (!alertedToPlayer || searchPoints.Count == 0)
 			return;

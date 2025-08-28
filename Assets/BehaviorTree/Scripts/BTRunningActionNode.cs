@@ -25,23 +25,29 @@ namespace EasyBehaviorTree
 		protected override NodeState Execute(GameObject context)
 		{
 			if (context == null || string.IsNullOrEmpty(functionName) || string.IsNullOrEmpty(doUntilConditionName))
+			{
+				Debug.LogWarning($"Method '{functionName}' or string '{doUntilConditionName}' not found on any MonoBehaviour attached to {context.name}");
 				return NodeState.FAILURE;
+			}
 
 			var components = context.GetComponents<MonoBehaviour>();
 			foreach (var comp in components)
 			{
+
 				var method = comp.GetType().GetMethod(functionName, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic);
 				if (method != null)
 				{
 					method.Invoke(comp, null);
-
+					
 					var finishedField = comp.GetType().GetField(doUntilConditionName);
 					if(finishedField != null && finishedField.GetValue(comp) is bool finished ) //Check if there is a bool field with the provided string
 					{
 						if (finished) //If the bool value is true
 						{
+							Debug.Log($"Finished {functionName}.");
 							return NodeState.SUCCESS;
 						}
+						Debug.Log($"Running {functionName}.");
 						return NodeState.RUNNING;
 					}
 					else if (GetBlackboard().Has(doUntilConditionName)) //Check if there is a blackboard value that matches the provided string
