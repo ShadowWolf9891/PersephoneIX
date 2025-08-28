@@ -57,7 +57,7 @@ MonoBehaviour:
   numberOfSearchPoints: 3
   timeAtEachPoint: 2
   visionRange: 100
-  visionAngle: 60
+  visionAngle: 90
   doneScreaming: 0
 --- !u!195 &8429858854645291116
 NavMeshAgent:

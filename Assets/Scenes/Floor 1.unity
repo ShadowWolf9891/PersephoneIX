@@ -24008,6 +24008,10 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8334505608045975557, guid: fe72cef5bb3a7d14cab175beb64df258, type: 3}
+      propertyPath: visionAngle
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8334505608045975557, guid: fe72cef5bb3a7d14cab175beb64df258, type: 3}
       propertyPath: patrolPoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -28036,7 +28040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4685014179512792583, guid: 2a061fdfd99d97449891ea71e3935fb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.84
+      value: -5.95
       objectReference: {fileID: 0}
     - target: {fileID: 4685014179512792583, guid: 2a061fdfd99d97449891ea71e3935fb2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44322,7 +44326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1039218932
 Light:
   m_ObjectHideFlags: 0
@@ -67391,7 +67395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4685014179512792583, guid: 2a061fdfd99d97449891ea71e3935fb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.73
+      value: -6.03
       objectReference: {fileID: 0}
     - target: {fileID: 4685014179512792583, guid: 2a061fdfd99d97449891ea71e3935fb2, type: 3}
       propertyPath: m_LocalPosition.y
